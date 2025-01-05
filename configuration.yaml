@@ -1,0 +1,33 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
+
+rest_command:
+  call_my_url:
+    url: 'https://script.google.com/macros/s/AKfycbzcbuGwNk8bzfFBu4u_9LU3Vfq8u6VeZzlIQuJ2SWdrOw35YLXTxhdhifbrHhllNMqmHw/exec'
+    method: 'GET'
+    headers:
+      Content-Type: 'application/json'
+  left:
+    url: 'https://script.google.com/macros/s/AKfycbwrMTJkNvNvf0GhLWDwqsaq--Xb_5elbxZeJZwzxbjOc-3iJ6NEpi4lp5Pm65jYmUICgA/exec?boob=LEFT'
+    method: 'GET'
+    headers:
+      Content-Type: 'application/json'
+  right:
+    url: 'https://script.google.com/macros/s/AKfycbwrMTJkNvNvf0GhLWDwqsaq--Xb_5elbxZeJZwzxbjOc-3iJ6NEpi4lp5Pm65jYmUICgA/exec?boob=RIGHT'
+    method: 'GET'
+    headers:
+      Content-Type: 'application/json'
