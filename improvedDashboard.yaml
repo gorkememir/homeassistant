@@ -38,8 +38,21 @@ views:
               - type: climate-fan-modes
                 style: dropdown
             grid_options:
-              columns: 12
+              columns: 6
               rows: 5
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_0c3f
+            name: Main Bedroom
+            show_entity_picture: false
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_5a3e
+            name: Main Bathroom
+          - type: tile
+            entity: sensor.living_room_temperature
+            name: Living Room
+          - type: tile
+            entity: sensor.basement_hygrometer
+            name: Basement
           - type: entities
             entities:
               - entity: sensor.blue_green_bins
@@ -47,15 +60,6 @@ views:
             title: Garbage Collection
             show_header_toggle: false
             state_color: false
-          - type: tile
-            entity: sensor.indoor_outdoor_meter_0c3f
-          - type: tile
-            entity: sensor.indoor_outdoor_meter_5a3e
-          - type: tile
-            entity: sensor.living_room_temperature
-          - type: tile
-            entity: sensor.basement_hygrometer
-            name: Basement Temperature
       - type: grid
         cards:
           - type: heading
@@ -95,8 +99,6 @@ views:
             entity: switch.office
           - type: tile
             entity: switch.bedroom_door_1
-          - type: tile
-            entity: switch.bedroom_door_2
           - type: tile
             entity: switch.laundry_light
           - type: tile
