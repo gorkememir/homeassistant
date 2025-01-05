@@ -2,7 +2,7 @@ views:
   - type: sections
     max_columns: 3
     title: Switches
-    icon: mdi:toggle-switch-variant-off
+    icon: mdi:tablet-dashboard
     sections:
       - type: grid
         cards:
@@ -34,25 +34,28 @@ views:
             name: Fergus
           - type: thermostat
             entity: climate.living_room
-            theme: minimalist-desktop
             features:
               - type: climate-fan-modes
                 style: dropdown
             grid_options:
               columns: 12
               rows: 5
-          - graph: line
-            type: sensor
+          - type: entities
+            entities:
+              - entity: sensor.blue_green_bins
+              - entity: sensor.yellow_bag
+            title: Garbage Collection
+            show_header_toggle: false
+            state_color: false
+          - type: tile
             entity: sensor.indoor_outdoor_meter_0c3f
-            detail: 1
-          - graph: line
-            type: sensor
+          - type: tile
             entity: sensor.indoor_outdoor_meter_5a3e
-            detail: 2
-            name: Main Bathroom
-            grid_options:
-              columns: 6
-              rows: 2
+          - type: tile
+            entity: sensor.living_room_temperature
+          - type: tile
+            entity: sensor.basement_hygrometer
+            name: Basement Temperature
       - type: grid
         cards:
           - type: heading
@@ -76,8 +79,6 @@ views:
           - type: tile
             entity: switch.hallway
           - type: tile
-            entity: switch.hallway_2_main
-          - type: tile
             entity: switch.stairs
           - type: tile
             entity: switch.christmas_tree
@@ -96,8 +97,6 @@ views:
             entity: switch.bedroom_door_1
           - type: tile
             entity: switch.bedroom_door_2
-          - type: tile
-            entity: switch.stairs_2
           - type: tile
             entity: switch.laundry_light
           - type: tile
@@ -123,7 +122,7 @@ views:
           - type: tile
             entity: sensor.front_door_battery_percentage
           - type: tile
-            entity: sensor.indoor_outdoor_meter_d597_battery
+            entity: sensor.basement_hygrometer_battery
           - type: tile
             entity: sensor.indoor_outdoor_meter_5a3e_battery
           - type: tile
