@@ -1,7 +1,7 @@
 views:
   - type: sections
     max_columns: 3
-    title: Switches
+    title: Dashboard
     icon: mdi:tablet-dashboard
     sections:
       - type: grid
@@ -39,7 +39,7 @@ views:
                 style: dropdown
             grid_options:
               columns: 6
-              rows: 5
+              rows: 4
           - type: tile
             entity: sensor.indoor_outdoor_meter_0c3f
             name: Main Bedroom
@@ -135,216 +135,228 @@ views:
             entity: sensor.samsung_s24_ebru_battery_level
           - type: tile
             entity: sensor.saziye_battery
-    cards: []
-  - type: panel
-    title: Main Floor
-    path: first
-    badges: []
-    cards:
-      - type: vertical-stack
+      - type: grid
         cards:
-          - type: picture-elements
-            image: /local/mainFloorDarkv1.png
-            elements:
-              - type: image
-                entity: switch.kitchen
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘switch.kitchen’].attributes.hs_color ?
-                    states[‘switch.kitchen’].attributes.hs_color[0] : 0) +
-                    "deg)"}
-                  opacity: >-
-                    ${states[‘switch.kitchen’].state === 'on' ?
-                    (states[‘switch.hallway’].attributes.brightness / 255) :
-                    '0'}
-                state_image:
-                  'on': /local/mainFloorKitchenv1.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: switch.hallway
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘switch.hallway’].attributes.hs_color ?
-                    states[‘switch.hallway’].attributes.hs_color[0] : 0) +
-                    "deg)"}
-                  opacity: >-
-                    ${states[‘switch.hallway’].state === 'on' ?
-                    (states[‘switch.hallway’].attributes.brightness / 255) :
-                    '0'}
-                state_image:
-                  'on': /local/mainFloorHallwayv1.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: light.dining
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘light.dining’].attributes.hs_color ?
-                    states[‘light.dining’].attributes.hs_color[0] : 0) + "deg)"}
-                  opacity: >-
-                    ${states[‘light.dining’].state === 'on' ?
-                    (states[‘light.dining’].attributes.brightness / 255) : '0'}
-                state_image:
-                  'on': /local/mainFloorDiningv1.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: switch.foyer
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘switch.foyer’].attributes.hs_color ?
-                    states[‘switch.foyer’].attributes.hs_color[0] : 0) + "deg)"}
-                  opacity: >-
-                    ${states[‘switch.foyer’].state === 'on' ?
-                    (states[‘switch.foyer’].attributes.brightness / 255) : '0'}
-                state_image:
-                  'on': /local/mainFloorFoyerv1.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: switch.living_room_switch
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘switch.living_room_switch’].attributes.hs_color ?
-                    states[‘switch.living_room_switch’].attributes.hs_color[0] :
-                    0) + "deg)"}
-                  opacity: >-
-                    ${states[‘switch.living_room_switch’].state === 'on' ?
-                    (states[‘switch.living_room_switch’].attributes.brightness /
-                    255) : '0'}
-                state_image:
-                  'on': /local/mainFloorLivingv1.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: switch.christmas_tree
-                style:
-                  left: 50%
-                  top: 50%
-                  width: 100%
-                  mix-blend-mode: lighten
-                  filter: >-
-                    ${ "hue-rotate(" +
-                    (states[‘switch.christmas_tree’].attributes.hs_color ?
-                    states[‘switch.christmas_tree’].attributes.hs_color[0] : 0)
-                    + "deg)"}
-                  opacity: >-
-                    ${states[‘switch.christmas_tree’].state === 'on' ?
-                    (states[‘switch.christmas_tree’].attributes.brightness /
-                    255) : '0'}
-                state_image:
-                  'on': /local/mainFloorChrist.png
-                  'off': /local/mainFloorDarkv1.png
-                tap_action:
-                  action: none
-              - type: image
-                entity: switch.foyer
-                style:
-                  left: 18%
-                  top: 32%
-                  width: 15%
-                  height: 20%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: light.dining
-                style:
-                  left: 81%
-                  top: 72%
-                  width: 15%
-                  height: 20%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.hallway
-                style:
-                  left: 38%
-                  top: 32%
-                  width: 15%
-                  height: 15%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.kitchen
-                style:
-                  left: 60%
-                  top: 70%
-                  width: 15%
-                  height: 15%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.living_room_switch
-                style:
-                  left: 77%
-                  top: 30%
-                  width: 15%
-                  height: 15%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.christmas_tree
-                style:
-                  left: 89%
-                  top: 83%
-                  width: 10%
-                  height: 10%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.switch.bot_ab22
-                style:
-                  left: 55%
-                  top: 13%
-                  width: 10%
-                  height: 10%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                tap_action:
-                  action: more-info
-                  entity: sensor.kawhi_odometer
-                style:
-                  top: 70%
-                  left: 30%
-                  width: 10%
-                  opacity: 0
-    icon: mdi:floor-plan
+          - type: vertical-stack
+            grid_options:
+              columns: full
+            path: first
+            panel: true
+            badges: []
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: picture-elements
+                    image: /local/mainFloorDarkv1.png
+                    elements:
+                      - type: image
+                        entity: switch.kitchen
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘switch.kitchen’].attributes.hs_color ?
+                            states[‘switch.kitchen’].attributes.hs_color[0] : 0)
+                            + "deg)"}
+                          opacity: >-
+                            ${states[‘switch.kitchen’].state === 'on' ?
+                            (states[‘switch.hallway’].attributes.brightness /
+                            255) : '0'}
+                        state_image:
+                          'on': /local/mainFloorKitchenv1.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: switch.hallway
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘switch.hallway’].attributes.hs_color ?
+                            states[‘switch.hallway’].attributes.hs_color[0] : 0)
+                            + "deg)"}
+                          opacity: >-
+                            ${states[‘switch.hallway’].state === 'on' ?
+                            (states[‘switch.hallway’].attributes.brightness /
+                            255) : '0'}
+                        state_image:
+                          'on': /local/mainFloorHallwayv1.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: light.dining
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘light.dining’].attributes.hs_color ?
+                            states[‘light.dining’].attributes.hs_color[0] : 0) +
+                            "deg)"}
+                          opacity: >-
+                            ${states[‘light.dining’].state === 'on' ?
+                            (states[‘light.dining’].attributes.brightness / 255)
+                            : '0'}
+                        state_image:
+                          'on': /local/mainFloorDiningv1.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: switch.foyer
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘switch.foyer’].attributes.hs_color ?
+                            states[‘switch.foyer’].attributes.hs_color[0] : 0) +
+                            "deg)"}
+                          opacity: >-
+                            ${states[‘switch.foyer’].state === 'on' ?
+                            (states[‘switch.foyer’].attributes.brightness / 255)
+                            : '0'}
+                        state_image:
+                          'on': /local/mainFloorFoyerv1.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: switch.living_room_switch
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘switch.living_room_switch’].attributes.hs_color
+                            ?
+                            states[‘switch.living_room_switch’].attributes.hs_color[0]
+                            : 0) + "deg)"}
+                          opacity: >-
+                            ${states[‘switch.living_room_switch’].state === 'on'
+                            ?
+                            (states[‘switch.living_room_switch’].attributes.brightness
+                            / 255) : '0'}
+                        state_image:
+                          'on': /local/mainFloorLivingv1.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: switch.christmas_tree
+                        style:
+                          left: 50%
+                          top: 50%
+                          width: 100%
+                          mix-blend-mode: lighten
+                          filter: >-
+                            ${ "hue-rotate(" +
+                            (states[‘switch.christmas_tree’].attributes.hs_color
+                            ?
+                            states[‘switch.christmas_tree’].attributes.hs_color[0]
+                            : 0) + "deg)"}
+                          opacity: >-
+                            ${states[‘switch.christmas_tree’].state === 'on' ?
+                            (states[‘switch.christmas_tree’].attributes.brightness
+                            / 255) : '0'}
+                        state_image:
+                          'on': /local/mainFloorChrist.png
+                          'off': /local/mainFloorDarkv1.png
+                        tap_action:
+                          action: none
+                      - type: image
+                        entity: switch.foyer
+                        style:
+                          left: 18%
+                          top: 32%
+                          width: 15%
+                          height: 20%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: light.dining
+                        style:
+                          left: 81%
+                          top: 72%
+                          width: 15%
+                          height: 20%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: switch.hallway
+                        style:
+                          left: 38%
+                          top: 32%
+                          width: 15%
+                          height: 15%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: switch.kitchen
+                        style:
+                          left: 60%
+                          top: 70%
+                          width: 15%
+                          height: 15%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: switch.living_room_switch
+                        style:
+                          left: 77%
+                          top: 30%
+                          width: 15%
+                          height: 15%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: switch.christmas_tree
+                        style:
+                          left: 89%
+                          top: 83%
+                          width: 10%
+                          height: 10%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        entity: switch.switch.bot_ab22
+                        style:
+                          left: 55%
+                          top: 13%
+                          width: 10%
+                          height: 10%
+                          opacity: 0
+                        tap_action:
+                          action: toggle
+                      - type: image
+                        tap_action:
+                          action: more-info
+                          entity: sensor.kawhi_odometer
+                        style:
+                          top: 70%
+                          left: 30%
+                          width: 10%
+                          opacity: 0
+            icon: mdi:floor-plan
+        column_span: 3
+    cards: []
