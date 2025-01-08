@@ -67,50 +67,97 @@ views:
             heading_style: subtitle
           - type: tile
             entity: switch.basement_switch
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.gym_socket_1
+            tap_action:
+              action: toggle
           - type: heading
             heading: Main Floor
             heading_style: subtitle
           - type: tile
             entity: switch.bot_ab22
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.living_room_switch
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.foyer
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.kitchen
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.hallway
+            name: Hallway
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.stairs
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.christmas_tree
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.porch_christmas_lights_socket_1
+            tap_action:
+              action: toggle
           - type: tile
             entity: light.dining
+          - type: tile
+            entity: switch.porch
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.backyard
+            tap_action:
+              action: toggle
           - type: heading
             heading: Top Floor
             heading_style: subtitle
           - type: tile
             entity: switch.main_bedroom
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.office
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.bedroom_door_1
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.laundry_light
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.main_bathroom_fan
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.guest_bathroom_fan
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.laundry_fan
+            tap_action:
+              action: toggle
           - type: tile
             entity: switch.bedroom_heater_socket_1
+            tap_action:
+              action: toggle
           - type: tile
             entity: vacuum.saziye
+            tap_action:
+              action: toggle
         column_span: 1
       - type: grid
         cards:
