@@ -1,13 +1,193 @@
 views:
+  - type: sections
+    max_columns: 3
+    title: Dashboard
+    icon: mdi:tablet-dashboard
+    sections:
+      - type: grid
+        cards:
+          - type: custom:digital-clock
+            style: |
+              span.first-line 
+              {
+                font-size: 5em;
+                margin-bottom:25px;
+              }
+              span.second-line 
+              {
+                font-size: 2.5em;
+                margin-bottom:15px;
+              }
+            locale: can
+            dateFormat:
+              weekday: long
+              day: 2-digit
+              month: long
+            timeFormat:
+              hour: 2-digit
+              minute: 2-digit
+          - show_current: true
+            show_forecast: true
+            type: weather-forecast
+            entity: weather.forecast_home
+            forecast_type: daily
+            name: Fergus
+          - type: thermostat
+            entity: climate.living_room
+            features:
+              - type: climate-fan-modes
+                style: dropdown
+            grid_options:
+              columns: 6
+              rows: 4
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_0c3f
+            name: Main Bedroom
+            show_entity_picture: false
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_5a3e
+            name: Main Bathroom
+          - type: tile
+            entity: sensor.living_room_temperature
+            name: Living Room
+          - type: tile
+            entity: sensor.basement_hygrometer
+            name: Basement
+          - type: entities
+            entities:
+              - entity: sensor.blue_green_bins
+              - entity: sensor.yellow_bag
+            title: Garbage Collection
+            show_header_toggle: false
+            state_color: false
+      - type: grid
+        cards:
+          - type: heading
+            heading: Basement
+            heading_style: subtitle
+          - type: tile
+            entity: switch.basement_switch
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.gym_socket_1
+            tap_action:
+              action: toggle
+          - type: heading
+            heading: Main Floor
+            heading_style: subtitle
+          - type: tile
+            entity: switch.bot_ab22
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.living_room_switch
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.foyer
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.kitchen
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.hallway
+            name: Hallway
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.stairs
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: light.dining
+            show_entity_picture: false
+            hide_state: false
+            vertical: false
+            state_content: brightness
+          - type: tile
+            entity: switch.porch
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.backyard
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.garage_light
+            tap_action:
+              action: toggle
+          - type: heading
+            heading: Top Floor
+            heading_style: subtitle
+          - type: tile
+            entity: switch.main_bedroom
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.office
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.bedroom_door_1
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.laundry_light
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.main_bathroom_fan
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.guest_bathroom_fan
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: switch.laundry_fan
+            tap_action:
+              action: toggle
+          - type: tile
+            entity: vacuum.saziye
+            tap_action:
+              action: toggle
+        column_span: 1
+      - type: grid
+        cards:
+          - type: picture-elements
+            elements: []
+            image: https://demo.home-assistant.io/stub_config/floorplan.png
+            camera_image: camera.front_yard_doorbell
+            camera_view: live
+          - type: tile
+            entity: sensor.contact_sensor_df81_battery
+          - type: tile
+            entity: sensor.front_door_battery_percentage
+          - type: tile
+            entity: sensor.basement_hygrometer_battery
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_5a3e_battery
+          - type: tile
+            entity: sensor.indoor_outdoor_meter_0c3f_battery
+          - type: tile
+            entity: sensor.gorkem_s_pixel_8_pro_battery_level
+          - type: tile
+            entity: sensor.samsung_s24_ebru_battery_level
+          - type: tile
+            entity: sensor.saziye_battery
+    cards: []
   - type: panel
-    title: Main Floor
-    path: first
-    badges: []
+    title: Floorplan
+    path: floorplan
+    icon: mdi:floor-plan
     cards:
       - type: vertical-stack
         cards:
           - type: picture-elements
-            image: /local/mainFloorDarkv1.png
+            image: /local/allOff.png
             elements:
               - type: image
                 entity: switch.kitchen
@@ -23,11 +203,11 @@ views:
                     "deg)"}
                   opacity: >-
                     ${states[‘switch.kitchen’].state === 'on' ?
-                    (states[‘switch.hallway’].attributes.brightness / 255) :
+                    (states[‘switch.kitchen’].attributes.brightness / 255) :
                     '0'}
                 state_image:
-                  'on': /local/mainFloorKitchenv1.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/kitchenOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
               - type: image
@@ -47,8 +227,8 @@ views:
                     (states[‘switch.hallway’].attributes.brightness / 255) :
                     '0'}
                 state_image:
-                  'on': /local/mainFloorHallwayv1.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/hallwayOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
               - type: image
@@ -66,8 +246,8 @@ views:
                     ${states[‘light.dining’].state === 'on' ?
                     (states[‘light.dining’].attributes.brightness / 255) : '0'}
                 state_image:
-                  'on': /local/mainFloorDiningv1.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/diningOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
               - type: image
@@ -85,8 +265,8 @@ views:
                     ${states[‘switch.foyer’].state === 'on' ?
                     (states[‘switch.foyer’].attributes.brightness / 255) : '0'}
                 state_image:
-                  'on': /local/mainFloorFoyerv1.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/foyerOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
               - type: image
@@ -106,12 +286,12 @@ views:
                     (states[‘switch.living_room_switch’].attributes.brightness /
                     255) : '0'}
                 state_image:
-                  'on': /local/mainFloorLivingv1.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/livingOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
               - type: image
-                entity: switch.christmas_tree
+                entity: switch.garage
                 style:
                   left: 50%
                   top: 50%
@@ -119,18 +299,115 @@ views:
                   mix-blend-mode: lighten
                   filter: >-
                     ${ "hue-rotate(" +
-                    (states[‘switch.christmas_tree’].attributes.hs_color ?
-                    states[‘switch.christmas_tree’].attributes.hs_color[0] : 0)
-                    + "deg)"}
+                    (states[‘switch.garage].attributes.hs_color ?
+                    states[‘switch.garage].attributes.hs_color[0] : 0) + "deg)"}
                   opacity: >-
-                    ${states[‘switch.christmas_tree’].state === 'on' ?
-                    (states[‘switch.christmas_tree’].attributes.brightness /
-                    255) : '0'}
+                    ${states[‘switch.garage].state === 'on' ?
+                    (states[‘switch.garage].attributes.brightness / 255) : '0'}
                 state_image:
-                  'on': /local/mainFloorChrist.png
-                  'off': /local/mainFloorDarkv1.png
+                  'on': /local/garageOn.png
+                  'off': /local/allOff.png
                 tap_action:
                   action: none
+              - type: image
+                entity: switch.porch
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                  mix-blend-mode: lighten
+                  filter: >-
+                    ${ "hue-rotate(" +
+                    (states[‘switch.porch].attributes.hs_color ?
+                    states[‘switch.porch].attributes.hs_color[0] : 0) + "deg)"}
+                  opacity: >-
+                    ${states[‘switch.porch].state === 'on' ?
+                    (states[‘switch.porch].attributes.brightness / 255) : '0'}
+                state_image:
+                  'on': /local/porchOn.png
+                  'off': /local/allOff.png
+                tap_action:
+                  action: none
+              - type: image
+                entity: switch.stairs
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                  mix-blend-mode: lighten
+                  filter: >-
+                    ${ "hue-rotate(" +
+                    (states[‘switch.stairs].attributes.hs_color ?
+                    states[‘switch.stairs].attributes.hs_color[0] : 0) + "deg)"}
+                  opacity: >-
+                    ${states[‘switch.stairs].state === 'on' ?
+                    (states[‘switch.stairs].attributes.brightness / 255) : '0'}
+                state_image:
+                  'on': /local/stairsOn.png
+                  'off': /local/allOff.png
+                tap_action:
+                  action: none
+              - type: image
+                entity: switch.backyard
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                  mix-blend-mode: lighten
+                  filter: >-
+                    ${ "hue-rotate(" +
+                    (states[‘switch.backyard].attributes.hs_color ?
+                    states[‘switch.backyard].attributes.hs_color[0] : 0) +
+                    "deg)"}
+                  opacity: >-
+                    ${states[‘switch.backyard].state === 'on' ?
+                    (states[‘switch.backyard].attributes.brightness / 255) :
+                    '0'}
+                state_image:
+                  'on': /local/backyardOn.png
+                  'off': /local/allOff.png
+                tap_action:
+                  action: none
+              - type: image
+                entity: switch.stairs
+                style:
+                  left: 18%
+                  top: 32%
+                  width: 15%
+                  height: 20%
+                  opacity: 0
+                tap_action:
+                  action: toggle
+              - type: image
+                entity: switch.garage
+                style:
+                  left: 18%
+                  top: 32%
+                  width: 15%
+                  height: 20%
+                  opacity: 0
+                tap_action:
+                  action: toggle
+              - type: image
+                entity: switch.backyard
+                style:
+                  left: 18%
+                  top: 32%
+                  width: 15%
+                  height: 20%
+                  opacity: 0
+                tap_action:
+                  action: toggle
+              - type: image
+                entity: switch.porch
+                style:
+                  left: 18%
+                  top: 32%
+                  width: 15%
+                  height: 20%
+                  opacity: 0
+                tap_action:
+                  action: toggle
               - type: image
                 entity: switch.foyer
                 style:
@@ -181,32 +458,4 @@ views:
                   opacity: 0
                 tap_action:
                   action: toggle
-              - type: image
-                entity: switch.christmas_tree
-                style:
-                  left: 89%
-                  top: 83%
-                  width: 10%
-                  height: 10%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                entity: switch.switch.bot_ab22
-                style:
-                  left: 55%
-                  top: 13%
-                  width: 10%
-                  height: 10%
-                  opacity: 0
-                tap_action:
-                  action: toggle
-              - type: image
-                tap_action:
-                  action: more-info
-                  entity: sensor.kawhi_odometer
-                style:
-                  top: 70%
-                  left: 30%
-                  width: 10%
-                  opacity: 0
+            
