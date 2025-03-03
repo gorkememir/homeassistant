@@ -1,0 +1,180 @@
+type: sections
+max_columns: 3
+title: Dashboard
+icon: mdi:tablet-dashboard
+sections:
+  - type: grid
+    cards:
+      - type: custom:digital-clock
+        style: |
+          span.first-line 
+          {
+            font-size: 5em;
+            margin-bottom:25px;
+          }
+          span.second-line 
+          {
+            font-size: 2.5em;
+            margin-bottom:15px;
+          }
+        locale: can
+        dateFormat:
+          weekday: long
+          day: 2-digit
+          month: long
+        timeFormat:
+          hour: 2-digit
+          minute: 2-digit
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.forecast_home
+        forecast_type: daily
+        name: Fergus
+      - type: thermostat
+        entity: climate.living_room
+        features:
+          - type: climate-fan-modes
+            style: dropdown
+        grid_options:
+          columns: 6
+          rows: 4
+      - type: tile
+        entity: sensor.indoor_outdoor_meter_0c3f
+        name: Main Bedroom
+        show_entity_picture: false
+      - type: tile
+        entity: sensor.indoor_outdoor_meter_5a3e
+        name: Main Bathroom
+      - type: tile
+        entity: sensor.living_room_temperature
+        name: Living Room
+      - type: tile
+        entity: sensor.basement_hygrometer
+        name: Basement
+      - type: entities
+        entities:
+          - entity: sensor.blue_green_bins
+          - entity: sensor.yellow_bag
+        title: Garbage Collection
+        show_header_toggle: false
+        state_color: false
+  - type: grid
+    cards:
+      - type: heading
+        heading: Basement
+        heading_style: subtitle
+      - type: tile
+        entity: switch.basement_switch
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.gym_socket_1
+        tap_action:
+          action: toggle
+      - type: heading
+        heading: Main Floor
+        heading_style: subtitle
+      - type: tile
+        entity: switch.bot_ab22
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.living_room_switch
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.foyer
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.kitchen
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.hallway
+        name: Hallway
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.stairs
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: light.dining
+        show_entity_picture: false
+        hide_state: false
+        vertical: false
+        state_content: brightness
+      - type: tile
+        entity: switch.porch
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.backyard
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.garage_light
+        tap_action:
+          action: toggle
+      - type: heading
+        heading: Top Floor
+        heading_style: subtitle
+      - type: tile
+        entity: switch.main_bedroom
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.office
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.bedroom_door_1
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.laundry_light
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.main_bathroom_fan
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.guest_bathroom_fan
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: switch.laundry_fan
+        tap_action:
+          action: toggle
+      - type: tile
+        entity: vacuum.saziye
+        tap_action:
+          action: toggle
+    column_span: 1
+  - type: grid
+    cards:
+      - type: picture-elements
+        elements: []
+        image: https://demo.home-assistant.io/stub_config/floorplan.png
+        camera_image: camera.front_yard_doorbell
+        camera_view: live
+      - type: tile
+        entity: sensor.contact_sensor_df81_battery
+      - type: tile
+        entity: sensor.front_door_battery_percentage
+      - type: tile
+        entity: sensor.basement_hygrometer_battery
+      - type: tile
+        entity: sensor.indoor_outdoor_meter_5a3e_battery
+      - type: tile
+        entity: sensor.indoor_outdoor_meter_0c3f_battery
+      - type: tile
+        entity: sensor.gorkem_s_pixel_8_pro_battery_level
+      - type: tile
+        entity: sensor.samsung_s24_ebru_battery_level
+      - type: tile
+        entity: sensor.saziye_battery
+cards: []
