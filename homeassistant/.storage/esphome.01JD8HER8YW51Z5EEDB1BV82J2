@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JD8HER8YW51Z5EEDB1BV82J2",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "esphome-web-6be42c",
+      "friendly_name": "ESPHome Web 6be42c",
+      "mac_address": "C8:2E:18:6B:E4:2C",
+      "compilation_time": "Nov 22 2024, 10:11:31",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.11.0",
+      "project_name": "esphome.web",
+      "project_version": "dev",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "sensor": [
+      {
+        "object_id": "weight_sensor",
+        "key": 1183795350,
+        "name": "Weight Sensor",
+        "unique_id": "esphome-web-6be42csensorweight_sensor",
+        "disabled_by_default": false,
+        "icon": "mdi:scale",
+        "entity_category": 0,
+        "device_class": "",
+        "unit_of_measurement": "g",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": []
+  }
+}

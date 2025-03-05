@@ -1,0 +1,615 @@
+2025-03-05 09:03:26.276 WARNING (SyncWorker_0) [homeassistant.util.yaml.loader] YAML file /config/themes/bootstrap5/bootstrap5/bootstrap5.yaml contains duplicate key "app-header-background-color". Check lines 2 and 240
+2025-03-05 09:03:26.357 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ha_blueair which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.358 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.359 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration kia_uvo which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.360 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration waste_collection_schedule which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.361 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration eufy_security which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.363 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration nest_protect which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.364 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration cloudflare_tunnel_monitor which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.365 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration ui_lovelace_minimalist which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:26.367 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration smartthinq_sensors which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-03-05 09:03:30.547 ERROR (MainThread) [homeassistant.config] Invalid config for 'group' at configuration.yaml, line 35: expected a dictionary for dictionary value 'group', got [{'platform': 'group', 'name': 'All Lights', 'entities': ['light.dining', 'switch.garage_light', 'switch.living_room_switch', 'switch.laundry_light', 'switch.bedroom_door_1', 'switch.main_bedroom', 'switch.basement', 'switch.backyard', 'switch.foyer', 'switch.hallway', 'switch.kitchen', 'switch.office', 'switch.porch', 'switch.stairs']}], please check the docs at https://www.home-assistant.io/integrations/group
+2025-03-05 09:03:30.548 ERROR (MainThread) [homeassistant.setup] Setup failed for 'group': Invalid config.
+2025-03-05 09:03:31.945 WARNING (MainThread) [homeassistant.util.loop] Detected blocking call to load_default_certs with args (<ssl.SSLContext object at 0x7f5f962ba0>, <Purpose.SERVER_AUTH: _ASN1Object(nid=129, shortname='serverAuth', longname='TLS Web Server Authentication', oid='1.3.6.1.5.5.7.3.1')>) inside the event loop by custom integration 'smartthinq_sensors' at custom_components/smartthinq_sensors/wideq/core_async.py, line 149: context = ssl.create_default_context() (offender: /usr/local/lib/python3.13/ssl.py, line 722: context.load_default_certs(purpose)), please create a bug report at https://github.com/ollo69/ha-smartthinq-sensors/issues
+For developers, please see https://developers.home-assistant.io/docs/asyncio_blocking_operations/#load_default_certs
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 227, in <module>
+    sys.exit(main())
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 213, in main
+    exit_code = runner.run(runtime_conf)
+  File "/usr/src/homeassistant/homeassistant/runner.py", line 154, in run
+    return loop.run_until_complete(setup_and_run_hass(runtime_config))
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 707, in run_until_complete
+    self.run_forever()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 678, in run_forever
+    self._run_once()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 2033, in _run_once
+    handle._run()
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 171, in async_setup_component
+    result = await _async_setup_component(hass, domain, config)
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 467, in _async_setup_component
+    await asyncio.gather(
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 469, in <genexpr>
+    create_eager_task(
+  File "/usr/src/homeassistant/homeassistant/util/async_.py", line 45, in create_eager_task
+    return Task(coro, loop=loop, name=name, eager_start=True)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 782, in async_setup_locked
+    await self.async_setup(hass, integration=integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 548, in async_setup
+    await self.__async_setup_with_context(hass, integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 637, in __async_setup_with_context
+    result = await component.async_setup_entry(hass, self)
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 252, in async_setup_entry
+    client = await lge_auth.create_client_from_token(refresh_token, oauth2_url)
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 151, in create_client_from_token
+    return await ClientAsync.from_token(
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 1562, in from_token
+    gateway = await Gateway.discover(core)
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 744, in discover
+    gw_info = await core.gateway_info()
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 450, in gateway_info
+    result = await self.thinq2_get(V2_GATEWAY_URL)
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 332, in thinq2_get
+    async with self._get_session().get(
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 217, in _get_session
+    self._session = lg_client_session()
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 149, in lg_client_session
+    context = ssl.create_default_context()
+
+2025-03-05 09:03:32.017 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Integration repo "browser mod" is not installed!
+2025-03-05 09:03:32.018 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "button-card" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.018 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "light-entity-card" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.018 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-auto-entities" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.018 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "mini-media-player" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.019 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "my-cards" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.019 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "simple-weather-card" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.019 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-layout-card" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.019 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "lovelace-state-switch" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.019 ERROR (MainThread) [custom_components.ui_lovelace_minimalist.base] HACS Frontend repo "weather-radar-card" is not installed, See Integration Configuration.
+2025-03-05 09:03:32.029 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'ui_lovelace_minimalist' accessed lovelace_data['dashboards'] instead of lovelace_data.dashboards at custom_components/ui_lovelace_minimalist/base.py, line 412: self.hass.data["lovelace"]["dashboards"][dashboard_url] = LovelaceYAML(. This will stop working in Home Assistant 2026.2, please create a bug report at https://github.com/UI-Lovelace-Minimalist/UI/issues
+2025-03-05 09:03:32.033 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'ui_lovelace_minimalist' accessed lovelace_data['dashboards'] instead of lovelace_data.dashboards at custom_components/ui_lovelace_minimalist/base.py, line 423: self.hass.data["lovelace"]["dashboards"][adv_dashboard_url] = (. This will stop working in Home Assistant 2026.2, please create a bug report at https://github.com/UI-Lovelace-Minimalist/UI/issues
+2025-03-05 09:03:34.452 WARNING (MainThread) [homeassistant.util.loop] Detected blocking call to import_module with args ('encodings.ascii',) inside the event loop by custom integration 'smartthinq_sensors' at custom_components/smartthinq_sensors/wideq/core_async.py, line 1637: encoding = detect(content)["encoding"] (offender: /usr/local/lib/python3.13/site-packages/charset_normalizer/utils.py, line 263: importlib.import_module("encodings.{}".format(name)).IncrementalDecoder,), please create a bug report at https://github.com/ollo69/ha-smartthinq-sensors/issues
+For developers, please see https://developers.home-assistant.io/docs/asyncio_blocking_operations/#import_module
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 227, in <module>
+    sys.exit(main())
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 213, in main
+    exit_code = runner.run(runtime_conf)
+  File "/usr/src/homeassistant/homeassistant/runner.py", line 154, in run
+    return loop.run_until_complete(setup_and_run_hass(runtime_config))
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 707, in run_until_complete
+    self.run_forever()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 678, in run_forever
+    self._run_once()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 2033, in _run_once
+    handle._run()
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 782, in async_setup_locked
+    await self.async_setup(hass, integration=integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 548, in async_setup
+    await self.__async_setup_with_context(hass, integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 637, in __async_setup_with_context
+    result = await component.async_setup_entry(hass, self)
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 294, in async_setup_entry
+    lge_devices, unsupported_devices, discovered_devices = await lge_devices_setup(
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 618, in lge_devices_setup
+    if not await init_device(lge_dev, device_info, root_dev):
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 574, in init_device
+    if not await dev.init_device():
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 447, in init_device
+    if not await self._device.init_device_info():
+  File "/config/custom_components/smartthinq_sensors/wideq/devices/washerDryer.py", line 219, in init_device_info
+    if result := await super().init_device_info():
+  File "/config/custom_components/smartthinq_sensors/wideq/device.py", line 467, in init_device_info
+    self._model_data = await self._client.model_url_info(
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 1705, in model_url_info
+    if not (model_url_info := await self._load_json_info(url)):
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 1637, in _load_json_info
+    encoding = detect(content)["encoding"]
+
+2025-03-05 09:03:34.559 WARNING (MainThread) [homeassistant.util.loop] Detected blocking call to open with args ('/config/custom_components/smartthinq_sensors/wideq/local_lang_pack.json', 'r') inside the event loop by custom integration 'smartthinq_sensors' at custom_components/smartthinq_sensors/wideq/core_async.py, line 1678: with open(data_file, "r", encoding="utf-8") as lang_file: (offender: /config/custom_components/smartthinq_sensors/wideq/core_async.py, line 1678: with open(data_file, "r", encoding="utf-8") as lang_file:), please create a bug report at https://github.com/ollo69/ha-smartthinq-sensors/issues
+For developers, please see https://developers.home-assistant.io/docs/asyncio_blocking_operations/#open
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 227, in <module>
+    sys.exit(main())
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 213, in main
+    exit_code = runner.run(runtime_conf)
+  File "/usr/src/homeassistant/homeassistant/runner.py", line 154, in run
+    return loop.run_until_complete(setup_and_run_hass(runtime_config))
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 707, in run_until_complete
+    self.run_forever()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 678, in run_forever
+    self._run_once()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 2033, in _run_once
+    handle._run()
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 782, in async_setup_locked
+    await self.async_setup(hass, integration=integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 548, in async_setup
+    await self.__async_setup_with_context(hass, integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 637, in __async_setup_with_context
+    result = await component.async_setup_entry(hass, self)
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 294, in async_setup_entry
+    lge_devices, unsupported_devices, discovered_devices = await lge_devices_setup(
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 618, in lge_devices_setup
+    if not await init_device(lge_dev, device_info, root_dev):
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 574, in init_device
+    if not await dev.init_device():
+  File "/config/custom_components/smartthinq_sensors/__init__.py", line 447, in init_device
+    if not await self._device.init_device_info():
+  File "/config/custom_components/smartthinq_sensors/wideq/devices/washerDryer.py", line 219, in init_device_info
+    if result := await super().init_device_info():
+  File "/config/custom_components/smartthinq_sensors/wideq/device.py", line 494, in init_device_info
+    self._local_lang_pack = self._client.local_lang_pack()
+  File "/config/custom_components/smartthinq_sensors/wideq/core_async.py", line 1678, in local_lang_pack
+    with open(data_file, "r", encoding="utf-8") as lang_file:
+
+2025-03-05 09:03:36.485 WARNING (MainThread) [homeassistant.util.loop] Detected blocking call to load_default_certs with args (<ssl.SSLContext object at 0x7f58fadd00>, <Purpose.SERVER_AUTH: _ASN1Object(nid=129, shortname='serverAuth', longname='TLS Web Server Authentication', oid='1.3.6.1.5.5.7.3.1')>) inside the event loop by custom integration 'kia_uvo' at custom_components/kia_uvo/coordinator.py, line 55: self.vehicle_manager = VehicleManager( (offender: /usr/local/lib/python3.13/ssl.py, line 722: context.load_default_certs(purpose)), please create a bug report at https://github.com/Hyundai-Kia-Connect/kia_uvo/issues
+For developers, please see https://developers.home-assistant.io/docs/asyncio_blocking_operations/#load_default_certs
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 227, in <module>
+    sys.exit(main())
+  File "/usr/src/homeassistant/homeassistant/__main__.py", line 213, in main
+    exit_code = runner.run(runtime_conf)
+  File "/usr/src/homeassistant/homeassistant/runner.py", line 154, in run
+    return loop.run_until_complete(setup_and_run_hass(runtime_config))
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 707, in run_until_complete
+    self.run_forever()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 678, in run_forever
+    self._run_once()
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 2033, in _run_once
+    handle._run()
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 171, in async_setup_component
+    result = await _async_setup_component(hass, domain, config)
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 467, in _async_setup_component
+    await asyncio.gather(
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 469, in <genexpr>
+    create_eager_task(
+  File "/usr/src/homeassistant/homeassistant/util/async_.py", line 45, in create_eager_task
+    return Task(coro, loop=loop, name=name, eager_start=True)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 782, in async_setup_locked
+    await self.async_setup(hass, integration=integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 548, in async_setup
+    await self.__async_setup_with_context(hass, integration)
+  File "/usr/src/homeassistant/homeassistant/config_entries.py", line 637, in __async_setup_with_context
+    result = await component.async_setup_entry(hass, self)
+  File "/config/custom_components/kia_uvo/__init__.py", line 51, in async_setup_entry
+    coordinator = HyundaiKiaConnectDataUpdateCoordinator(hass, config_entry)
+  File "/config/custom_components/kia_uvo/coordinator.py", line 55, in __init__
+    self.vehicle_manager = VehicleManager(
+
+2025-03-05 09:03:38.490 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'smartthinq_sensors' registers an entity service with a non entity service schema at custom_components/smartthinq_sensors/humidifier.py, line 67: platform.async_register_entity_service(. This will stop working in Home Assistant 2025.9, please create a bug report at https://github.com/ollo69/ha-smartthinq-sensors/issues
+2025-03-05 09:03:39.220 ERROR (MainThread) [homeassistant.components.automation] Automation with alias 'Bedroom Humidity' failed to setup actions and has been disabled: Unknown device 'a6dece6ad82ba11398fd2aa7203923d9'
+2025-03-05 09:03:39.440 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol already exists - ignoring cover.office_blinds_curtain
+2025-03-05 09:03:39.440 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol already exists - ignoring cover.backyard_left_curtain
+2025-03-05 09:03:39.440 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control already exists - ignoring cover.backyard_right_curtain
+2025-03-05 09:03:39.440 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol already exists - ignoring cover.living_room_curtain
+2025-03-05 09:03:39.440 ERROR (MainThread) [homeassistant.components.humidifier] Platform tuya does not generate unique IDs. ID tuya.eb0b84d7883544434dmratswitch already exists - ignoring humidifier.humidifier
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgrelay_status already exists - ignoring select.gym_power_on_behavior
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kglight_mode already exists - ignoring select.gym_indicator_light_mode
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol_back_mode already exists - ignoring select.office_blinds_motor_mode
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol_back_mode already exists - ignoring select.backyard_left_motor_mode
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control_back_mode already exists - ignoring select.backyard_right_motor_mode
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol_back_mode already exists - ignoring select.living_room_motor_mode
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfrelay_status already exists - ignoring select.dining_power_on_behavior
+2025-03-05 09:03:39.441 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqflight_mode already exists - ignoring select.dining_indicator_light_mode
+2025-03-05 09:03:39.442 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgchild_lock already exists - ignoring switch.gym_child_lock
+2025-03-05 09:03:39.443 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgswitch_1 already exists - ignoring switch.gym_socket_1
+2025-03-05 09:03:39.443 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfchild_lock already exists - ignoring switch.dining_child_lock
+2025-03-05 09:03:39.443 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfswitch_1 already exists - ignoring switch.christmas_tree
+2025-03-05 09:03:39.447 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol already exists - ignoring cover.office_blinds_curtain
+2025-03-05 09:03:39.447 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol already exists - ignoring cover.backyard_left_curtain
+2025-03-05 09:03:39.447 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control already exists - ignoring cover.backyard_right_curtain
+2025-03-05 09:03:39.447 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol already exists - ignoring cover.living_room_curtain
+2025-03-05 09:03:39.448 ERROR (MainThread) [homeassistant.components.humidifier] Platform tuya does not generate unique IDs. ID tuya.eb0b84d7883544434dmratswitch already exists - ignoring humidifier.humidifier
+2025-03-05 09:03:39.448 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgrelay_status already exists - ignoring select.gym_power_on_behavior
+2025-03-05 09:03:39.449 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kglight_mode already exists - ignoring select.gym_indicator_light_mode
+2025-03-05 09:03:39.449 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol_back_mode already exists - ignoring select.office_blinds_motor_mode
+2025-03-05 09:03:39.449 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol_back_mode already exists - ignoring select.backyard_left_motor_mode
+2025-03-05 09:03:39.449 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control_back_mode already exists - ignoring select.backyard_right_motor_mode
+2025-03-05 09:03:39.450 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol_back_mode already exists - ignoring select.living_room_motor_mode
+2025-03-05 09:03:39.450 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfrelay_status already exists - ignoring select.dining_power_on_behavior
+2025-03-05 09:03:39.450 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqflight_mode already exists - ignoring select.dining_indicator_light_mode
+2025-03-05 09:03:39.451 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgchild_lock already exists - ignoring switch.gym_child_lock
+2025-03-05 09:03:39.451 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgswitch_1 already exists - ignoring switch.gym_socket_1
+2025-03-05 09:03:39.452 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfchild_lock already exists - ignoring switch.dining_child_lock
+2025-03-05 09:03:39.452 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfswitch_1 already exists - ignoring switch.christmas_tree
+2025-03-05 09:03:39.503 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol already exists - ignoring cover.office_blinds_curtain
+2025-03-05 09:03:39.504 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol already exists - ignoring cover.backyard_left_curtain
+2025-03-05 09:03:39.504 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control already exists - ignoring cover.backyard_right_curtain
+2025-03-05 09:03:39.504 ERROR (MainThread) [homeassistant.components.cover] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol already exists - ignoring cover.living_room_curtain
+2025-03-05 09:03:39.504 ERROR (MainThread) [homeassistant.components.humidifier] Platform tuya does not generate unique IDs. ID tuya.eb0b84d7883544434dmratswitch already exists - ignoring humidifier.humidifier
+2025-03-05 09:03:39.505 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgrelay_status already exists - ignoring select.gym_power_on_behavior
+2025-03-05 09:03:39.505 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kglight_mode already exists - ignoring select.gym_indicator_light_mode
+2025-03-05 09:03:39.505 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb0ef45a0136e8658eieqvcontrol_back_mode already exists - ignoring select.office_blinds_motor_mode
+2025-03-05 09:03:39.505 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.eb47dd4071573dc17e6u8ncontrol_back_mode already exists - ignoring select.backyard_left_motor_mode
+2025-03-05 09:03:39.505 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebef64042956d4ccd2eln4control_back_mode already exists - ignoring select.backyard_right_motor_mode
+2025-03-05 09:03:39.506 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebc7d6df4ec165d490cpglcontrol_back_mode already exists - ignoring select.living_room_motor_mode
+2025-03-05 09:03:39.506 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfrelay_status already exists - ignoring select.dining_power_on_behavior
+2025-03-05 09:03:39.506 ERROR (MainThread) [homeassistant.components.select] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqflight_mode already exists - ignoring select.dining_indicator_light_mode
+2025-03-05 09:03:39.507 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgchild_lock already exists - ignoring switch.gym_child_lock
+2025-03-05 09:03:39.507 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.eb13c1f5c158f92ed847kgswitch_1 already exists - ignoring switch.gym_socket_1
+2025-03-05 09:03:39.507 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfchild_lock already exists - ignoring switch.dining_child_lock
+2025-03-05 09:03:39.507 ERROR (MainThread) [homeassistant.components.switch] Platform tuya does not generate unique IDs. ID tuya.ebb561450669b05d28kmqfswitch_1 already exists - ignoring switch.christmas_tree
+2025-03-05 09:03:42.121 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for esphome-web-6be42c @ 192.168.2.119: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.2.119', port=6053))]: [Errno 113] Connect call failed ('192.168.2.119', 6053) (SocketAPIError)
+2025-03-05 09:03:47.257 WARNING (MainThread) [homeassistant.config_entries] Config entry '127.0.0.1' for eufy_security integration could not authenticate: Multi factor code is required, please revalidate on Integrations page
+2025-03-05 09:03:48.040 WARNING (Recorder) [homeassistant.components.recorder.db_schema] State attributes for sensor.blue_green_bins exceed maximum size of 16384 bytes. This can cause database performance issues; Attributes will not be stored
+2025-03-05 09:03:48.398 WARNING (Recorder) [homeassistant.components.recorder.db_schema] State attributes for sensor.blue_green_bins exceed maximum size of 16384 bytes. This can cause database performance issues; Attributes will not be stored
+2025-03-05 09:04:33.778 WARNING (MainThread) [homeassistant.components.websocket_api.http.connection] [546726959936] from 184.146.179.248 (Mozilla/5.0 (Linux; Android 14; SM-P613 Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.137 Safari/537.36): Disconnected: Received close message during auth phase
+2025-03-05 09:04:49.665 WARNING (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): Device unexpectedly disconnected; RSSI: -88
+2025-03-05 09:05:18.379 WARNING (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): Device unexpectedly disconnected; RSSI: -88
+2025-03-05 09:06:05.925 WARNING (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): Device unexpectedly disconnected; RSSI: -88
+2025-03-05 09:06:55.120 WARNING (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): Device unexpectedly disconnected; RSSI: -88
+2025-03-05 09:08:28.285 WARNING (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): Device unexpectedly disconnected; RSSI: -88
+2025-03-05 09:08:44.783 ERROR (MainThread) [switchbot.devices.device] D8-35-34-38-2A-0C (D8:35:34:38:2A:0C): device not found, no longer in range, or poor RSSI: -88
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/bleak/backends/bluezdbus/client.py", line 214, in connect
+    reply = await self._bus.call(
+            ^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/dbus_fast/aio/message_bus.py", line 392, in call
+    await future
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/bleak_retry_connector/__init__.py", line 366, in establish_connection
+    await client.connect(
+    ...<3 lines>...
+    )
+  File "/usr/local/lib/python3.13/site-packages/habluetooth/wrappers.py", line 311, in connect
+    connected = await super().connect(**kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/bleak/__init__.py", line 615, in connect
+    return await self._backend.connect(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/bleak/backends/bluezdbus/client.py", line 151, in connect
+    async with async_timeout(timeout):
+               ~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/switchbot/devices/device.py", line 225, in _send_command
+    return await self._send_command_locked(key, command)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/switchbot/devices/device.py", line 459, in _send_command_locked
+    await self._ensure_connected()
+  File "/usr/local/lib/python3.13/site-packages/switchbot/devices/device.py", line 319, in _ensure_connected
+    client: BleakClientWithServiceCache = await establish_connection(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/bleak_retry_connector/__init__.py", line 390, in establish_connection
+    _raise_if_needed(name, device.address, exc)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/bleak_retry_connector/__init__.py", line 330, in _raise_if_needed
+    raise BleakNotFoundError(msg) from exc
+bleak_retry_connector.BleakNotFoundError: D8-35-34-38-2A-0C (D8:35:34:38:2A:0C) - D8:35:34:38:2A:0C: Failed to connect after 12 attempt(s): TimeoutError
+2025-03-05 09:08:44.793 ERROR (MainThread) [homeassistant.components.switchbot] D8:35:34:38:2A:0C: Bluetooth error whilst polling: D8-35-34-38-2A-0C (D8:35:34:38:2A:0C) - D8:35:34:38:2A:0C: Failed to connect after 12 attempt(s): TimeoutError
+2025-03-05 09:11:57.199 ERROR (MainThread) [homeassistant] Error doing job: Exception in callback WebSocketClient._on_close() (None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/config/custom_components/eufy_security/eufy_security_api/web_socket_client.py", line 81, in _on_close
+    self.close_callback(future)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/config/custom_components/eufy_security/eufy_security_api/api_client.py", line 317, in _on_close
+    _LOGGER.debug(f"on_close - executed - {future} = {future.exception()}")
+                                                      ~~~~~~~~~~~~~~~~^^
+  File "/config/custom_components/eufy_security/eufy_security_api/web_socket_client.py", line 63, in _process_messages
+    async for msg in self.socket:
+        await self._on_message(msg)
+  File "/usr/local/lib/python3.13/site-packages/aiohttp/client_ws.py", line 412, in __anext__
+    msg = await self.receive()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/aiohttp/client_ws.py", line 334, in receive
+    msg = await self._reader.read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_websocket/reader_c.py", line 112, in read
+  File "aiohttp/_websocket/reader_c.py", line 109, in aiohttp._websocket.reader_c.WebSocketDataQueue.read
+asyncio.exceptions.CancelledError
+2025-03-05 09:12:03.617 WARNING (MainThread) [homeassistant.helpers.frame] Detected that custom integration 'kia_uvo' sets option flow config_entry explicitly, which is deprecated at custom_components/kia_uvo/config_flow.py, line 78: self.config_entry = config_entry. This will stop working in Home Assistant 2025.12, please create a bug report at https://github.com/Hyundai-Kia-Connect/kia_uvo/issues
+2025-03-05 09:12:28.376 WARNING (MainThread) [homeassistant.config_entries] Config entry '127.0.0.1' for eufy_security integration could not authenticate: Multi factor code is required, please revalidate on Integrations page
+2025-03-05 09:13:41.670 ERROR (MainThread) [homeassistant.components.automation.purifier_and_humidifier_conflict_prevention] Purifier and Humidifier Conflict Prevention: Choose at step 1: choice 1: Error executing script. Unexpected error for device at pos 1: network error:(1100) param is empty
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 526, in _async_step
+    await getattr(self, handler)()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 779, in _async_device_step
+    await device_action.async_call_action_from_config(
+        self._hass, self._action, self._variables, self._context
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/action.py", line 72, in async_call_action_from_config
+    await platform.async_call_action_from_config(hass, config, variables, context)
+  File "/usr/src/homeassistant/homeassistant/components/humidifier/device_action.py", line 101, in async_call_action_from_config
+    await toggle_entity.async_call_action_from_config(
+        hass, config, variables, context, DOMAIN
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/toggle_entity.py", line 124, in async_call_action_from_config
+    await hass.services.async_call(
+        domain, action, service_data, blocking=True, context=context
+    )
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2794, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2837, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1007, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1079, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 1711, in async_turn_off
+    await self.hass.async_add_executor_job(ft.partial(self.turn_off, **kwargs))
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/tuya/humidifier.py", line 172, in turn_off
+    self._send_command([{"code": self._switch_dpcode, "value": False}])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/tuya/entity.py", line 298, in _send_command
+    self.device_manager.send_commands(self.device.id, commands)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/manager.py", line 93, in send_commands
+    return self.device_repository.send_commands(device_id, commands)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/device.py", line 180, in send_commands
+    self.api.post(f"/v1.1/m/thing/{device_id}/commands", None, {"commands": commands})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 192, in post
+    return self.__request("POST", path, params, body)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 121, in __request
+    raise Exception(f"network error:({ret['code']}) {ret['msg']}")
+Exception: network error:(1100) param is empty
+2025-03-05 09:13:41.682 ERROR (MainThread) [homeassistant.components.automation.purifier_and_humidifier_conflict_prevention] Purifier and Humidifier Conflict Prevention: Error executing script. Unexpected error for choose at pos 1: network error:(1100) param is empty
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 526, in _async_step
+    await getattr(self, handler)()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1047, in _async_choose_step
+    await self._async_run_script(script)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1272, in _async_run_script
+    result = await self._async_run_long_action(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 727, in _async_run_long_action
+    return await long_task
+           ^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1808, in async_run
+    return await asyncio.shield(create_eager_task(run.async_run()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 464, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 528, in _async_step
+    self._handle_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        ex, continue_on_error, self._log_exceptions or log_exceptions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 558, in _handle_exception
+    raise exception
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 526, in _async_step
+    await getattr(self, handler)()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 779, in _async_device_step
+    await device_action.async_call_action_from_config(
+        self._hass, self._action, self._variables, self._context
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/action.py", line 72, in async_call_action_from_config
+    await platform.async_call_action_from_config(hass, config, variables, context)
+  File "/usr/src/homeassistant/homeassistant/components/humidifier/device_action.py", line 101, in async_call_action_from_config
+    await toggle_entity.async_call_action_from_config(
+        hass, config, variables, context, DOMAIN
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/toggle_entity.py", line 124, in async_call_action_from_config
+    await hass.services.async_call(
+        domain, action, service_data, blocking=True, context=context
+    )
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2794, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2837, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1007, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1079, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 1711, in async_turn_off
+    await self.hass.async_add_executor_job(ft.partial(self.turn_off, **kwargs))
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/tuya/humidifier.py", line 172, in turn_off
+    self._send_command([{"code": self._switch_dpcode, "value": False}])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/tuya/entity.py", line 298, in _send_command
+    self.device_manager.send_commands(self.device.id, commands)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/manager.py", line 93, in send_commands
+    return self.device_repository.send_commands(device_id, commands)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/device.py", line 180, in send_commands
+    self.api.post(f"/v1.1/m/thing/{device_id}/commands", None, {"commands": commands})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 192, in post
+    return self.__request("POST", path, params, body)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 121, in __request
+    raise Exception(f"network error:({ret['code']}) {ret['msg']}")
+Exception: network error:(1100) param is empty
+2025-03-05 09:13:41.689 ERROR (MainThread) [homeassistant.components.automation.purifier_and_humidifier_conflict_prevention] While executing automation automation.purifier_and_humidifier_conflict_prevention
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 717, in async_trigger
+    return await self.action_script.async_run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        variables, trigger_context, started_action
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1808, in async_run
+    return await asyncio.shield(create_eager_task(run.async_run()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 464, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 528, in _async_step
+    self._handle_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        ex, continue_on_error, self._log_exceptions or log_exceptions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 558, in _handle_exception
+    raise exception
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 526, in _async_step
+    await getattr(self, handler)()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1047, in _async_choose_step
+    await self._async_run_script(script)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1272, in _async_run_script
+    result = await self._async_run_long_action(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 727, in _async_run_long_action
+    return await long_task
+           ^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 1808, in async_run
+    return await asyncio.shield(create_eager_task(run.async_run()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 464, in async_run
+    await self._async_step(log_exceptions=False)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 528, in _async_step
+    self._handle_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        ex, continue_on_error, self._log_exceptions or log_exceptions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 558, in _handle_exception
+    raise exception
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 526, in _async_step
+    await getattr(self, handler)()
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 779, in _async_device_step
+    await device_action.async_call_action_from_config(
+        self._hass, self._action, self._variables, self._context
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/action.py", line 72, in async_call_action_from_config
+    await platform.async_call_action_from_config(hass, config, variables, context)
+  File "/usr/src/homeassistant/homeassistant/components/humidifier/device_action.py", line 101, in async_call_action_from_config
+    await toggle_entity.async_call_action_from_config(
+        hass, config, variables, context, DOMAIN
+    )
+  File "/usr/src/homeassistant/homeassistant/components/device_automation/toggle_entity.py", line 124, in async_call_action_from_config
+    await hass.services.async_call(
+        domain, action, service_data, blocking=True, context=context
+    )
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2794, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2837, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1007, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 1079, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 1711, in async_turn_off
+    await self.hass.async_add_executor_job(ft.partial(self.turn_off, **kwargs))
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/tuya/humidifier.py", line 172, in turn_off
+    self._send_command([{"code": self._switch_dpcode, "value": False}])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/tuya/entity.py", line 298, in _send_command
+    self.device_manager.send_commands(self.device.id, commands)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/manager.py", line 93, in send_commands
+    return self.device_repository.send_commands(device_id, commands)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/device.py", line 180, in send_commands
+    self.api.post(f"/v1.1/m/thing/{device_id}/commands", None, {"commands": commands})
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 192, in post
+    return self.__request("POST", path, params, body)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/tuya_sharing/customerapi.py", line 121, in __request
+    raise Exception(f"network error:({ret['code']}) {ret['msg']}")
+Exception: network error:(1100) param is empty
+2025-03-05 09:15:18.681 ERROR (MainThread) [homeassistant] Error doing job: Exception in callback WebSocketClient._on_close() (None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/config/custom_components/eufy_security/eufy_security_api/web_socket_client.py", line 81, in _on_close
+    self.close_callback(future)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/config/custom_components/eufy_security/eufy_security_api/api_client.py", line 317, in _on_close
+    _LOGGER.debug(f"on_close - executed - {future} = {future.exception()}")
+                                                      ~~~~~~~~~~~~~~~~^^
+  File "/config/custom_components/eufy_security/eufy_security_api/web_socket_client.py", line 63, in _process_messages
+    async for msg in self.socket:
+        await self._on_message(msg)
+  File "/usr/local/lib/python3.13/site-packages/aiohttp/client_ws.py", line 412, in __anext__
+    msg = await self.receive()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/aiohttp/client_ws.py", line 334, in receive
+    msg = await self._reader.read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_websocket/reader_c.py", line 112, in read
+  File "aiohttp/_websocket/reader_c.py", line 109, in aiohttp._websocket.reader_c.WebSocketDataQueue.read
+asyncio.exceptions.CancelledError
+2025-03-05 09:44:35.718 ERROR (MainThread) [homeassistant.components.androidtv.entity] Failed to execute an ADB command. ADB connection re-establishing attempt in the next update. Error: Reading from 192.168.2.38:5555 timed out (9.0 seconds)
+2025-03-05 09:44:37.719 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.2.38:5555.  TcpTimeoutException: Connecting to 192.168.2.38:5555 timed out (1.0 seconds)
+2025-03-05 09:45:06.342 ERROR (Thread-36) [pychromecast.socket_client] [AS-AFTTI43[Cast](192.168.2.38):58009] Failed to connect to service MDNSServiceInfo(name='AS-AFTTI43[Cast]._googlecast._tcp.local.'), retrying in 5.0s
+2025-03-05 10:00:00.146 WARNING (Recorder) [homeassistant.components.recorder.db_schema] State attributes for sensor.blue_green_bins exceed maximum size of 16384 bytes. This can cause database performance issues; Attributes will not be stored
+2025-03-05 10:26:16.609 WARNING (Thread-2 (_thread_main)) [roombapy.remote_client] Unknown disconnection error: ID=16.Kindly use https://github.com/pschmitt/roombapy/issues/new
+2025-03-05 10:26:16.610 WARNING (Thread-2 (_thread_main)) [roombapy.roomba] Unexpectedly disconnected from Roomba 192.168.2.21, code UNKNOWN_ERROR
+2025-03-05 10:26:16.610 WARNING (Thread-2 (_thread_main)) [roombapy.remote_client] Unknown disconnection error: ID=16.Kindly use https://github.com/pschmitt/roombapy/issues/new
+2025-03-05 10:26:16.610 WARNING (Thread-2 (_thread_main)) [roombapy.roomba] Unexpectedly disconnected from Roomba 192.168.2.21, code UNKNOWN_ERROR
+2025-03-05 10:59:06.034 ERROR (MainThread) [homeassistant.components.androidtv.entity] Failed to execute an ADB command. ADB connection re-establishing attempt in the next update. Error: Reading from 192.168.2.38:5555 timed out (9.0 seconds)
+2025-03-05 10:59:08.035 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.2.38:5555.  TcpTimeoutException: Connecting to 192.168.2.38:5555 timed out (1.0 seconds)
+2025-03-05 10:59:33.145 ERROR (Thread-36) [pychromecast.socket_client] [AS-AFTTI43[Cast](192.168.2.38):58009] Failed to connect to service MDNSServiceInfo(name='AS-AFTTI43[Cast]._googlecast._tcp.local.'), retrying in 5.0s
+2025-03-05 12:17:36.364 ERROR (MainThread) [homeassistant.components.androidtv.entity] Failed to execute an ADB command. ADB connection re-establishing attempt in the next update. Error: Reading from 192.168.2.38:5555 timed out (9.0 seconds)
+2025-03-05 12:17:38.364 WARNING (MainThread) [androidtv.adb_manager.adb_manager_async] Couldn't connect to 192.168.2.38:5555.  TcpTimeoutException: Connecting to 192.168.2.38:5555 timed out (1.0 seconds)
+2025-03-05 12:43:25.579 ERROR (MainThread) [homeassistant.components.ipp.coordinator] Error fetching ipp data: Invalid response from API: Timeout occurred while connecting to IPP server.

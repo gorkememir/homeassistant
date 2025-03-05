@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "gorkem_emir",
+        "name": "Gorkem Emir",
+        "user_id": "14987bfb09684eeb9ca3fe6652075ac6",
+        "device_trackers": [
+          "device_tracker.oneplus_8_pro",
+          "device_tracker.sm_p613",
+          "device_tracker.gorkem_s_pixel_8_pro"
+        ]
+      },
+      {
+        "id": "ebru_emir",
+        "name": "Ebru Emir",
+        "device_trackers": [
+          "device_tracker.samsung_s24_ebru"
+        ],
+        "user_id": "4e26a2ab979a4057aadf1a2106a25e17",
+        "picture": null
+      },
+      {
+        "id": "wallpanel",
+        "name": "WallPanel",
+        "device_trackers": [],
+        "user_id": "19ee37a7034645858b9684483ad42912",
+        "picture": null
+      }
+    ]
+  }
+}

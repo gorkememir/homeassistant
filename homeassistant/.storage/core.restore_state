@@ -1,0 +1,582 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"person.gorkem_emir","state":"unknown","attributes":{"editable":true,"id":"gorkem_emir","device_trackers":["device_tracker.oneplus_8_pro","device_tracker.sm_p613","device_tracker.gorkem_s_pixel_8_pro"],"user_id":"14987bfb09684eeb9ca3fe6652075ac6","friendly_name":"Gorkem Emir"},"last_changed":"2025-03-05T14:03:27.522252+00:00","last_reported":"2025-03-05T14:03:47.263358+00:00","last_updated":"2025-03-05T14:03:47.263358+00:00","context":{"id":"01JNK9X8NZWMJ4RST61TMK85AN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"person.ebru_emir","state":"unknown","attributes":{"editable":true,"id":"ebru_emir","device_trackers":["device_tracker.samsung_s24_ebru"],"user_id":"4e26a2ab979a4057aadf1a2106a25e17","friendly_name":"Ebru Emir"},"last_changed":"2025-03-05T14:03:27.522412+00:00","last_reported":"2025-03-05T14:03:47.263467+00:00","last_updated":"2025-03-05T14:03:47.263467+00:00","context":{"id":"01JNK9X8NZ5FF63PRWJC2RK8NW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"person.wallpanel","state":"unknown","attributes":{"editable":true,"id":"wallpanel","device_trackers":[],"user_id":"19ee37a7034645858b9684483ad42912","friendly_name":"WallPanel"},"last_changed":"2025-03-05T14:03:27.522507+00:00","last_reported":"2025-03-05T14:03:47.263516+00:00","last_updated":"2025-03-05T14:03:47.263516+00:00","context":{"id":"01JNK9X8NZX2NRTG9QRE7EMZK8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"stt.home_assistant_cloud","state":"unknown","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-03-05T14:03:30.310606+00:00","last_reported":"2025-03-05T14:03:30.310606+00:00","last_updated":"2025-03-05T14:03:30.310606+00:00","context":{"id":"01JNK9WR46Q0RZRZAFBSB920NQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.home_assistant_cloud","state":"2024-05-24T21:07:24.121623+00:00","attributes":{"friendly_name":"Home Assistant Cloud"},"last_changed":"2025-03-05T14:03:30.310962+00:00","last_reported":"2025-03-05T14:03:30.310962+00:00","last_updated":"2025-03-05T14:03:30.310962+00:00","context":{"id":"01JNK9WR46QQS7Y6M6CEKJ2Y3Q","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2024-05-24T21:07:24.070529+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-03-05T14:03:30.539793+00:00","last_reported":"2025-03-05T14:03:30.539793+00:00","last_updated":"2025-03-05T14:03:30.539793+00:00","context":{"id":"01JNK9WRBB0XFT3HXTA65RNC91","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"scene.movie_theatre","state":"2024-08-27T01:28:02.710522+00:00","attributes":{"entity_id":["light.bulb_rgbcw_686a0d","number.bulb_rgbcw_686a0d_effect_speed","switch.office"],"id":"1715828380874","icon":"mdi:movie-open","friendly_name":"Movie Theatre"},"last_changed":"2025-03-05T14:03:30.540753+00:00","last_reported":"2025-03-05T14:03:30.540753+00:00","last_updated":"2025-03-05T14:03:30.540753+00:00","context":{"id":"01JNK9WRBC3A99VGHNT4G1EX4Y","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.time","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"time"},"last_changed":"2025-03-05T14:03:33.481215+00:00","last_reported":"2025-03-05T14:03:33.481215+00:00","last_updated":"2025-03-05T14:03:33.481215+00:00","context":{"id":"01JNK9WV79D417XC4YJTG8QJWB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.oneplus_8_pro","state":"unknown","attributes":{"source_type":"gps","friendly_name":"OnePlus 8 Pro"},"last_changed":"2025-03-05T14:03:37.307710+00:00","last_reported":"2025-03-05T14:03:37.307710+00:00","last_updated":"2025-03-05T14:03:37.307710+00:00","context":{"id":"01JNK9WYYVPAHW2THWYBHM1X8F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.oneplus_8_pro_battery_level","state":"1","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-outline","friendly_name":"OnePlus 8 Pro Battery level"},"last_changed":"2025-03-05T14:03:37.317740+00:00","last_reported":"2025-03-05T14:03:37.317740+00:00","last_updated":"2025-03-05T14:03:37.317740+00:00","context":{"id":"01JNK9WYZ5FX660MFJMD2S93WV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 1,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.oneplus_8_pro_battery_state","state":"not_charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery","friendly_name":"OnePlus 8 Pro Battery state"},"last_changed":"2025-03-05T14:03:37.318051+00:00","last_reported":"2025-03-05T14:03:37.318051+00:00","last_updated":"2025-03-05T14:03:37.318051+00:00","context":{"id":"01JNK9WYZ6S4AW261JTV5WE21A","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "not_charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.oneplus_8_pro_charger_type","state":"none","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:battery","friendly_name":"OnePlus 8 Pro Charger type"},"last_changed":"2025-03-05T14:03:37.318221+00:00","last_reported":"2025-03-05T14:03:37.318221+00:00","last_updated":"2025-03-05T14:03:37.318221+00:00","context":{"id":"01JNK9WYZ6YPRNM5TTA1WQ2J1M","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "none",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.samsung_s24_ebru","state":"unknown","attributes":{"source_type":"gps","friendly_name":"Samsung S24 - Ebru"},"last_changed":"2025-03-05T14:03:37.319128+00:00","last_reported":"2025-03-05T14:03:37.319128+00:00","last_updated":"2025-03-05T14:03:37.319128+00:00","context":{"id":"01JNK9WYZ73CY0R6GY1KKJ1A3S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_s24_ebru_battery_level","state":"20","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-20","friendly_name":"Samsung S24 - Ebru Battery level"},"last_changed":"2025-03-05T14:03:37.319524+00:00","last_reported":"2025-03-05T14:03:37.319524+00:00","last_updated":"2025-03-05T14:03:37.319524+00:00","context":{"id":"01JNK9WYZ7YJJFR3D9AJJAQXJH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 20,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_s24_ebru_battery_state","state":"discharging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-minus","friendly_name":"Samsung S24 - Ebru Battery state"},"last_changed":"2025-03-05T14:03:37.319680+00:00","last_reported":"2025-03-05T14:03:37.319680+00:00","last_updated":"2025-03-05T14:03:37.319680+00:00","context":{"id":"01JNK9WYZ7NVGG2FGTF5AVGM57","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "discharging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_s24_ebru_charger_type","state":"none","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:battery","friendly_name":"Samsung S24 - Ebru Charger type"},"last_changed":"2025-03-05T14:03:37.319825+00:00","last_reported":"2025-03-05T14:03:37.319825+00:00","last_updated":"2025-03-05T14:03:37.319825+00:00","context":{"id":"01JNK9WYZ7F3BDJ4C529Y50Z8K","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "none",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.samsung_tablet","state":"home","attributes":{"source_type":"gps","latitude":43.7068644,"longitude":-80.4105283,"gps_accuracy":100,"altitude":379.0,"course":0,"speed":0,"vertical_accuracy":100,"friendly_name":"Samsung Tablet"},"last_changed":"2025-03-05T17:44:42.439316+00:00","last_reported":"2025-03-05T17:44:42.439316+00:00","last_updated":"2025-03-05T17:44:42.439316+00:00","context":{"id":"01JNKPHS6707PFEGCJ7KGSY62R","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_tablet_battery_level","state":"79","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging-70","friendly_name":"Samsung Tablet Battery level"},"last_changed":"2025-03-05T14:03:37.320846+00:00","last_reported":"2025-03-05T17:44:42.568845+00:00","last_updated":"2025-03-05T17:44:42.568845+00:00","context":{"id":"01JNKPHSA8ZJ7CPNFYNCVYH23G","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 79,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_tablet_battery_state","state":"charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-plus","friendly_name":"Samsung Tablet Battery state"},"last_changed":"2025-03-05T17:44:42.569233+00:00","last_reported":"2025-03-05T17:44:42.569233+00:00","last_updated":"2025-03-05T17:44:42.569233+00:00","context":{"id":"01JNKPHSA97Y1DG57KMX54FMRF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.samsung_tablet_charger_type","state":"ac","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:power-plug","friendly_name":"Samsung Tablet Charger type"},"last_changed":"2025-03-05T14:03:37.321175+00:00","last_reported":"2025-03-05T14:03:37.321175+00:00","last_updated":"2025-03-05T14:03:37.321175+00:00","context":{"id":"01JNK9WYZ9R25TZVWV1K2R5JYP","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ac",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.gorkem_s_pixel_8_pro","state":"unknown","attributes":{"source_type":"gps","friendly_name":"Gorkem's Pixel 8 Pro"},"last_changed":"2025-03-05T14:03:37.321750+00:00","last_reported":"2025-03-05T14:03:37.321750+00:00","last_updated":"2025-03-05T14:03:37.321750+00:00","context":{"id":"01JNK9WYZ9GZ44XSSKV71S5G00","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.gorkem_s_pixel_8_pro_battery_level","state":"87","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-80","friendly_name":"Gorkem's Pixel 8 Pro Battery level"},"last_changed":"2025-03-05T17:40:50.696526+00:00","last_reported":"2025-03-05T17:40:50.696526+00:00","last_updated":"2025-03-05T17:40:50.696526+00:00","context":{"id":"01JNKPAPW8Z99W1S3FA62WABYP","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 87,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.gorkem_s_pixel_8_pro_battery_state","state":"not_charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery","friendly_name":"Gorkem's Pixel 8 Pro Battery state"},"last_changed":"2025-03-05T17:40:50.696901+00:00","last_reported":"2025-03-05T17:40:50.696901+00:00","last_updated":"2025-03-05T17:40:50.696901+00:00","context":{"id":"01JNKPAPW88MC1SGEZWHQXN5FS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "not_charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.gorkem_s_pixel_8_pro_charger_type","state":"wireless","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:battery-charging-wireless","friendly_name":"Gorkem's Pixel 8 Pro Charger type"},"last_changed":"2025-03-05T17:40:50.697220+00:00","last_reported":"2025-03-05T17:40:50.697220+00:00","last_updated":"2025-03-05T17:40:50.697220+00:00","context":{"id":"01JNKPAPW918ACR5GZ7J1Y0ZD6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "wireless",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.card_to_display_bar_chart_oriented_to_display_power_sensors_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.2.3","in_progress":false,"latest_version":"v1.2.3","release_summary":null,"release_url":"https://github.com/tdvtdv/ha-tdv-bar/releases/v1.2.3","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Card to display bar chart oriented to display power sensors update","supported_features":23},"last_changed":"2025-03-05T14:03:38.129197+00:00","last_reported":"2025-03-05T14:03:38.129197+00:00","last_updated":"2025-03-05T14:03:38.129197+00:00","context":{"id":"01JNK9WZRH7NBDMXWA3W6GGY10","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.nest_protect_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.3.12","in_progress":false,"latest_version":"v0.4.0","release_summary":null,"release_url":"https://github.com/iMicknl/ha-nest-protect/releases/v0.4.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/nest_protect/icon.png","friendly_name":"Nest Protect update","supported_features":23},"last_changed":"2025-03-05T14:03:38.129552+00:00","last_reported":"2025-03-05T14:03:38.129552+00:00","last_updated":"2025-03-05T14:03:38.129552+00:00","context":{"id":"01JNK9WZRHS9MYQ8PYP11RTHX9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hacs_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.0.1","in_progress":false,"latest_version":"2.0.5","release_summary":null,"release_url":"https://github.com/hacs/integration/releases/2.0.5","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hacs/icon.png","friendly_name":"HACS update","supported_features":23},"last_changed":"2025-03-05T14:03:38.130720+00:00","last_reported":"2025-03-05T14:03:38.130720+00:00","last_updated":"2025-03-05T14:03:38.130720+00:00","context":{"id":"01JNK9WZRJXRYGYPDCE6TPNWR9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.better_moment_card_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2024.12.18","in_progress":false,"latest_version":"2025.01.11","release_summary":null,"release_url":"https://github.com/ibz0q/better-moment-card/releases/2025.01.11","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Better Moment Card update","supported_features":23},"last_changed":"2025-03-05T14:03:38.131168+00:00","last_reported":"2025-03-05T14:03:38.131168+00:00","last_updated":"2025-03-05T14:03:38.131168+00:00","context":{"id":"01JNK9WZRKK6MVEQ4T9TJG8GW0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.ui_lovelace_minimalist_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.3.14","in_progress":false,"latest_version":"v1.3.17","release_summary":null,"release_url":"https://github.com/UI-Lovelace-Minimalist/UI/releases/v1.3.17","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/ui_lovelace_minimalist/icon.png","friendly_name":"UI Lovelace Minimalist update","supported_features":23},"last_changed":"2025-03-05T14:03:38.131430+00:00","last_reported":"2025-03-05T14:03:38.131430+00:00","last_updated":"2025-03-05T14:03:38.131430+00:00","context":{"id":"01JNK9WZRK1ABBZNCY1AB5NTW0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.bootstrap_5_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.0.0","in_progress":false,"latest_version":"v1.0.0","release_summary":null,"release_url":"https://github.com/Eonasdan/home-assistant-bootstrap-5-theme/releases/v1.0.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Bootstrap 5 update","supported_features":23},"last_changed":"2025-03-05T14:03:38.131580+00:00","last_reported":"2025-03-05T14:03:38.131580+00:00","last_updated":"2025-03-05T14:03:38.131580+00:00","context":{"id":"01JNK9WZRK1FF6CPNWX464WEWH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.eufy_security_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v8.1.1","in_progress":false,"latest_version":"v8.1.1","release_summary":null,"release_url":"https://github.com/fuatakgun/eufy_security/releases/v8.1.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/eufy_security/icon.png","friendly_name":"Eufy Security update","supported_features":23},"last_changed":"2025-03-05T14:03:38.131717+00:00","last_reported":"2025-03-05T14:03:38.131717+00:00","last_updated":"2025-03-05T14:03:38.131717+00:00","context":{"id":"01JNK9WZRKPEH6JW9XZCCBZ8TV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.clear_theme_dark_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.3","in_progress":false,"latest_version":"v1.3","release_summary":null,"release_url":"https://github.com/naofireblade/clear-theme-dark/releases/v1.3","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Clear Theme Dark update","supported_features":23},"last_changed":"2025-03-05T14:03:38.131841+00:00","last_reported":"2025-03-05T14:03:38.131841+00:00","last_updated":"2025-03-05T14:03:38.131841+00:00","context":{"id":"01JNK9WZRK4C2G829X00M6XV4C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.card_mod_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.4.3","in_progress":false,"latest_version":"v3.4.4","release_summary":null,"release_url":"https://github.com/thomasloven/lovelace-card-mod/releases/v3.4.4","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"card-mod update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132073+00:00","last_reported":"2025-03-05T14:03:38.132073+00:00","last_updated":"2025-03-05T14:03:38.132073+00:00","context":{"id":"01JNK9WZRMN07XMS7BF8MZST1D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mini_graph_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.12.1","in_progress":false,"latest_version":"v0.12.1","release_summary":null,"release_url":"https://github.com/kalkih/mini-graph-card/releases/v0.12.1","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"mini-graph-card update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132199+00:00","last_reported":"2025-03-05T14:03:38.132199+00:00","last_updated":"2025-03-05T14:03:38.132199+00:00","context":{"id":"01JNK9WZRMM8Z2QN9Y09MFAXF6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.smartthinq_lge_sensors_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.39.0","in_progress":false,"latest_version":"v0.41.1","release_summary":null,"release_url":"https://github.com/ollo69/ha-smartthinq-sensors/releases/v0.41.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/smartthinq_sensors/icon.png","friendly_name":"SmartThinQ LGE Sensors update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132415+00:00","last_reported":"2025-03-05T14:03:38.132415+00:00","last_updated":"2025-03-05T14:03:38.132415+00:00","context":{"id":"01JNK9WZRMC9DD7PYHPBPJZ43S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.kia_uvo_hyundai_bluelink_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.24.2","in_progress":false,"latest_version":"v2.36.0","release_summary":null,"release_url":"https://github.com/Hyundai-Kia-Connect/kia_uvo/releases/v2.36.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/kia_uvo/icon.png","friendly_name":"Kia Uvo / Hyundai Bluelink update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132632+00:00","last_reported":"2025-03-05T14:03:38.132632+00:00","last_updated":"2025-03-05T14:03:38.132632+00:00","context":{"id":"01JNK9WZRM9TR72MGYSTRKXH8M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.scheduler_card_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.2.13","in_progress":false,"latest_version":"v3.2.13","release_summary":null,"release_url":"https://github.com/nielsfaber/scheduler-card/releases/v3.2.13","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Scheduler Card update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132752+00:00","last_reported":"2025-03-05T14:03:38.132752+00:00","last_updated":"2025-03-05T14:03:38.132752+00:00","context":{"id":"01JNK9WZRM35RJHF1FHC2JYCFA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.dark_theme_pack_for_home_assistant_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.3.0","in_progress":false,"latest_version":"v1.3.0","release_summary":null,"release_url":"https://github.com/awolkers/home-assistant-themes/releases/v1.3.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Dark Theme Pack for Home Assistant update","supported_features":23},"last_changed":"2025-03-05T14:03:38.132884+00:00","last_reported":"2025-03-05T14:03:38.132884+00:00","last_updated":"2025-03-05T14:03:38.132884+00:00","context":{"id":"01JNK9WZRM1QVQHASWPC32PDPK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.digital_clock_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.2.4","in_progress":false,"latest_version":"v1.2.4","release_summary":null,"release_url":"https://github.com/wassy92x/lovelace-digital-clock/releases/v1.2.4","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Digital Clock update","supported_features":23},"last_changed":"2025-03-05T14:03:38.133111+00:00","last_reported":"2025-03-05T14:03:38.133111+00:00","last_updated":"2025-03-05T14:03:38.133111+00:00","context":{"id":"01JNK9WZRNK9GFRT6DHMPKTKGH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.waste_collection_schedule_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.5.0","in_progress":false,"latest_version":"2.6.0","release_summary":null,"release_url":"https://github.com/mampfes/hacs_waste_collection_schedule/releases/2.6.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/waste_collection_schedule/icon.png","friendly_name":"Waste Collection Schedule update","supported_features":23},"last_changed":"2025-03-05T14:03:38.133335+00:00","last_reported":"2025-03-05T14:03:38.133335+00:00","last_updated":"2025-03-05T14:03:38.133335+00:00","context":{"id":"01JNK9WZRNRSBT79PSPYN88A2C","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_swipe_navigation_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.15.0","in_progress":false,"latest_version":"v1.15.0","release_summary":null,"release_url":"https://github.com/zanna-37/hass-swipe-navigation/releases/v1.15.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Home Assistant Swipe Navigation update","supported_features":23},"last_changed":"2025-03-05T14:03:38.133469+00:00","last_reported":"2025-03-05T14:03:38.133469+00:00","last_updated":"2025-03-05T14:03:38.133469+00:00","context":{"id":"01JNK9WZRN501GT6AT54NW3M2H","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.kiosk_mode_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v6.4.0","in_progress":false,"latest_version":"v6.6.0","release_summary":null,"release_url":"https://github.com/NemesisRE/kiosk-mode/releases/v6.6.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Kiosk Mode update","supported_features":23},"last_changed":"2025-03-05T14:03:38.133668+00:00","last_reported":"2025-03-05T14:03:38.133668+00:00","last_updated":"2025-03-05T14:03:38.133668+00:00","context":{"id":"01JNK9WZRN84PZH7YC5M56RE45","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.cloudflare_tunnel_monitor_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.1.7.1","in_progress":false,"latest_version":"v2.1.7.2","release_summary":null,"release_url":"https://github.com/deadbeef3137/ha-cloudflare-tunnel-monitor/releases/v2.1.7.2","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/cloudflare_tunnel_monitor/icon.png","friendly_name":"Cloudflare Tunnel Monitor update","supported_features":23},"last_changed":"2025-03-05T14:03:38.134334+00:00","last_reported":"2025-03-05T14:03:38.134334+00:00","last_updated":"2025-03-05T14:03:38.134334+00:00","context":{"id":"01JNK9WZRPKZEKRWBH00EMYR2F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.blueair_filters_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.9.2","in_progress":false,"latest_version":"v1.30.1","release_summary":null,"release_url":"https://github.com/dahlb/ha_blueair/releases/v1.30.1","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/ha_blueair/icon.png","friendly_name":"Blueair Filters update","supported_features":23},"last_changed":"2025-03-05T14:03:38.134541+00:00","last_reported":"2025-03-05T14:03:38.134541+00:00","last_updated":"2025-03-05T14:03:38.134541+00:00","context":{"id":"01JNK9WZRPFQ7M888Q4C9YAR31","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dryer_remote_start","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:play-circle-outline","friendly_name":"Dryer Remote Start"},"last_changed":"2025-03-05T14:03:38.477735+00:00","last_reported":"2025-03-05T14:03:38.477735+00:00","last_updated":"2025-03-05T14:03:38.477735+00:00","context":{"id":"01JNK9X03D241WEADN0CSAVAXN","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"button.dryer_pause","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:pause-circle-outline","friendly_name":"Dryer Pause"},"last_changed":"2025-03-05T14:03:38.477862+00:00","last_reported":"2025-03-05T14:03:38.477862+00:00","last_updated":"2025-03-05T14:03:38.477862+00:00","context":{"id":"01JNK9X03DQNKZ4F6CDBDWH2Y5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"button.washer_remote_start","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:play-circle-outline","friendly_name":"Washer Remote Start"},"last_changed":"2025-03-05T14:03:38.477966+00:00","last_reported":"2025-03-05T14:03:38.477966+00:00","last_updated":"2025-03-05T14:03:38.477966+00:00","context":{"id":"01JNK9X03D3JBAGEXT5NGZXC8D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"button.washer_pause","state":"unavailable","attributes":{"device_class":"update","icon":"mdi:pause-circle-outline","friendly_name":"Washer Pause"},"last_changed":"2025-03-05T14:03:38.478059+00:00","last_reported":"2025-03-05T14:03:38.478059+00:00","last_updated":"2025-03-05T14:03:38.478059+00:00","context":{"id":"01JNK9X03EEYQEQM3K5718QP4N","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_en_com","state":"2024-11-22T01:12:03.718858+00:00","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2025-03-05T14:03:38.514242+00:00","last_reported":"2025-03-05T14:03:38.514242+00:00","last_updated":"2025-03-05T14:03:38.514242+00:00","context":{"id":"01JNK9X04JX9ZPT436JRBH6HXQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.bot_ab22","state":"on","attributes":{"last_run_success":true,"switch_mode":false,"assumed_state":true,"device_class":"switch","icon":"mdi:desktop-tower","friendly_name":"Gorkem PC Power"},"last_changed":"2025-03-05T14:03:39.205708+00:00","last_reported":"2025-03-05T14:03:39.205708+00:00","last_updated":"2025-03-05T14:03:39.205708+00:00","context":{"id":"01JNK9X0T5EH6JY0S67ADW3J60","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.turn_off_guest_bathroom_fan","state":"on","attributes":{"id":"1714266514918","last_triggered":"2025-03-05T11:47:15.126265+00:00","mode":"single","current":0,"friendly_name":"Limit guest bathroom fan running time to 10 mins"},"last_changed":"2025-03-05T14:03:39.240505+00:00","last_reported":"2025-03-05T14:03:39.240505+00:00","last_updated":"2025-03-05T14:03:39.240505+00:00","context":{"id":"01JNK9X0V8RX9MFHRVFNTKW4W2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.person_detected","state":"on","attributes":{"id":"1715823252368","last_triggered":"2025-03-05T10:53:17.591207+00:00","mode":"single","current":0,"friendly_name":"Foyer Lights"},"last_changed":"2025-03-05T14:03:39.240670+00:00","last_reported":"2025-03-05T14:03:39.240670+00:00","last_updated":"2025-03-05T14:03:39.240670+00:00","context":{"id":"01JNK9X0V8CSA4A10RWR1D6M4B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.light_up_the_gym","state":"on","attributes":{"id":"1716588637180","last_triggered":"2025-03-03T11:36:22.783298+00:00","mode":"single","current":0,"friendly_name":"Light-up the gym!"},"last_changed":"2025-03-05T14:03:39.240795+00:00","last_reported":"2025-03-05T14:03:39.240795+00:00","last_updated":"2025-03-05T14:03:39.240795+00:00","context":{"id":"01JNK9X0V84SJEESDHA6WP0DBS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.gym_omm","state":"on","attributes":{"id":"1716588692455","last_triggered":"2025-03-03T11:36:25.038461+00:00","mode":"single","current":0,"friendly_name":"Gym off"},"last_changed":"2025-03-05T14:03:39.240895+00:00","last_reported":"2025-03-05T14:03:39.240895+00:00","last_updated":"2025-03-05T14:03:39.240895+00:00","context":{"id":"01JNK9X0V8PD1M0NW698D0Z2MC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.bedroom_temp","state":"on","attributes":{"id":"1719814423724","last_triggered":"2025-03-01T21:00:00.302325+00:00","mode":"single","current":0,"friendly_name":"Bedroom temp"},"last_changed":"2025-03-05T14:03:39.241021+00:00","last_reported":"2025-03-05T14:03:39.241021+00:00","last_updated":"2025-03-05T14:03:39.241021+00:00","context":{"id":"01JNK9X0V9MA7NW84E2NVC465B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.guest_bathroom_hourly","state":"on","attributes":{"id":"1721191525838","last_triggered":"2025-03-05T17:00:00.290079+00:00","mode":"single","current":0,"friendly_name":"Guest Bathroom Hourly"},"last_changed":"2025-03-05T14:03:39.241355+00:00","last_reported":"2025-03-05T17:05:00.312572+00:00","last_updated":"2025-03-05T17:05:00.312572+00:00","context":{"id":"01JNKM92WR745TQWY1M01QE862","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.tag_pc_power_is_scanned","state":"on","attributes":{"id":"1725133021147","last_triggered":"2025-02-24T03:09:18.945616+00:00","mode":"single","current":0,"friendly_name":"Tag Pc Power is scanned"},"last_changed":"2025-03-05T14:03:39.241452+00:00","last_reported":"2025-03-05T14:03:39.241452+00:00","last_updated":"2025-03-05T14:03:39.241452+00:00","context":{"id":"01JNK9X0V99C2HW761ZVRD6NW2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.habit_tracker","state":"on","attributes":{"id":"1726102989808","last_triggered":"2025-02-24T18:25:52.129028+00:00","mode":"single","current":0,"friendly_name":"Habit Tracker"},"last_changed":"2025-03-05T14:03:39.241543+00:00","last_reported":"2025-03-05T14:03:39.241543+00:00","last_updated":"2025-03-05T14:03:39.241543+00:00","context":{"id":"01JNK9X0V9ERXG49T3VDEWF21S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.log_left","state":"off","attributes":{"id":"1726198529873","last_triggered":"2024-10-13T21:21:22.284472+00:00","mode":"single","current":0,"friendly_name":"Log Left"},"last_changed":"2025-03-05T14:03:39.241630+00:00","last_reported":"2025-03-05T14:03:39.241630+00:00","last_updated":"2025-03-05T14:03:39.241630+00:00","context":{"id":"01JNK9X0V9DGRK0GACYR0SRBD6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.log_right","state":"off","attributes":{"id":"1726198547865","last_triggered":"2024-10-13T21:21:19.144373+00:00","mode":"single","current":0,"friendly_name":"Log Right"},"last_changed":"2025-03-05T14:03:39.241716+00:00","last_reported":"2025-03-05T14:03:39.241716+00:00","last_updated":"2025-03-05T14:03:39.241716+00:00","context":{"id":"01JNK9X0V9P13NDDQMB1M9MEFJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.turn_on_garage_light","state":"on","attributes":{"id":"1727926100438","last_triggered":"2025-03-05T01:45:37.599707+00:00","mode":"single","current":0,"icon":"mdi:garage","friendly_name":"Turn on garage light"},"last_changed":"2025-03-05T14:03:39.241811+00:00","last_reported":"2025-03-05T14:03:39.241811+00:00","last_updated":"2025-03-05T14:03:39.241811+00:00","context":{"id":"01JNK9X0V9S99B8Z6HJDY75S4H","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.cozy_bedroom","state":"on","attributes":{"id":"1730091614332","last_triggered":"2025-03-05T07:00:00.271059+00:00","mode":"single","current":0,"friendly_name":"Cozy Bedroom"},"last_changed":"2025-03-05T14:03:39.241896+00:00","last_reported":"2025-03-05T14:03:39.241896+00:00","last_updated":"2025-03-05T14:03:39.241896+00:00","context":{"id":"01JNK9X0V92KDJPQWAFK9PFVNV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.fill_the_water","state":"off","attributes":{"id":"1732237782329","last_triggered":"2024-11-22T01:16:23.798115+00:00","mode":"single","current":0,"friendly_name":"Fill the water"},"last_changed":"2025-03-05T14:03:39.241972+00:00","last_reported":"2025-03-05T14:03:39.241972+00:00","last_updated":"2025-03-05T14:03:39.241972+00:00","context":{"id":"01JNK9X0V9DCAEQZ52TKEMZFN9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.main_bathroom_fan_off_after_10_mins","state":"on","attributes":{"id":"1738543546137","last_triggered":"2025-03-05T15:42:18.322735+00:00","mode":"single","current":0,"friendly_name":"Main Bathroom fan off after 10 mins"},"last_changed":"2025-03-05T14:03:39.242532+00:00","last_reported":"2025-03-05T15:42:18.383299+00:00","last_updated":"2025-03-05T15:42:18.383299+00:00","context":{"id":"01JNKFHN6JERREXNRMB79YJ8SZ","parent_id":"01JNKEZB8HW0QJ80CN4V8GSFS5","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.foyer_2_mins_motion_detection","state":"on","attributes":{"id":"1738544305387","last_triggered":"2025-03-05T10:53:27.091475+00:00","mode":"single","current":0,"friendly_name":"Foyer 2 mins - Motion detection"},"last_changed":"2025-03-05T14:03:39.242647+00:00","last_reported":"2025-03-05T14:03:39.242647+00:00","last_updated":"2025-03-05T14:03:39.242647+00:00","context":{"id":"01JNK9X0VAA26YKVP60JDH6E0M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.control_bedroom_door_switch_based_on_stairs_and_sun","state":"on","attributes":{"id":"1738546269690","last_triggered":"2025-03-04T01:08:58.642355+00:00","mode":"restart","current":0,"friendly_name":"Control Bedroom Door Switch Based on Stairs and Sun"},"last_changed":"2025-03-05T14:03:39.242737+00:00","last_reported":"2025-03-05T14:03:39.242737+00:00","last_updated":"2025-03-05T14:03:39.242737+00:00","context":{"id":"01JNK9X0VAGKTDRYE5DN9B6W8B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.sunrise","state":"on","attributes":{"id":"1738546715466","last_triggered":"2025-03-05T11:51:06.204328+00:00","mode":"single","current":0,"icon":"mdi:weather-sunset-up","friendly_name":"Sunrise"},"last_changed":"2025-03-05T14:03:39.242824+00:00","last_reported":"2025-03-05T14:03:39.242824+00:00","last_updated":"2025-03-05T14:03:39.242824+00:00","context":{"id":"01JNK9X0VAW05ZQP4BD7Q5KH34","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.lights_for_saziye","state":"on","attributes":{"id":"1738592288281","last_triggered":"2025-03-04T10:00:00.249293+00:00","mode":"single","current":0,"friendly_name":"Lights for Şaziye"},"last_changed":"2025-03-05T14:03:39.242908+00:00","last_reported":"2025-03-05T14:03:39.242908+00:00","last_updated":"2025-03-05T14:03:39.242908+00:00","context":{"id":"01JNK9X0VAEV2FQXPDWRJZH5W3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.sunset","state":"on","attributes":{"id":"1738800420967","last_triggered":"2025-03-04T23:14:18.364677+00:00","mode":"single","current":0,"icon":"mdi:weather-sunset-down","friendly_name":"Sunset"},"last_changed":"2025-03-05T14:03:39.242994+00:00","last_reported":"2025-03-05T14:03:39.242994+00:00","last_updated":"2025-03-05T14:03:39.242994+00:00","context":{"id":"01JNK9X0VA4Z6APFEPZ6XPYNK4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.purifier_and_humidifier_conflict_prevention","state":"on","attributes":{"id":"1739467074410","last_triggered":"2025-03-05T14:13:41.411195+00:00","mode":"restart","current":0,"friendly_name":"Purifier and Humidifier Conflict Prevention"},"last_changed":"2025-03-05T14:03:39.243084+00:00","last_reported":"2025-03-05T14:13:41.687757+00:00","last_updated":"2025-03-05T14:13:41.687757+00:00","context":{"id":"01JNKAFCX280HMRFFN3G703P9N","parent_id":"01JNKAFCX28YGYW8QP8NJX25P5","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.limit_laundry_fan_running_time_to_10_mins","state":"on","attributes":{"id":"1740106883671","last_triggered":"2025-03-01T15:35:57.926340+00:00","mode":"single","current":0,"friendly_name":"Limit laundry fan running time to 10 mins"},"last_changed":"2025-03-05T14:03:39.243176+00:00","last_reported":"2025-03-05T14:03:39.243176+00:00","last_updated":"2025-03-05T14:03:39.243176+00:00","context":{"id":"01JNK9X0VBVTD0KWG5PFFXWWH8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_yard_doorbell_chime","state":"2025-03-05T15:29:12.037+00:00","attributes":{"event_types":["doorbell_chime"],"event_type":"doorbell_chime","nest_event_id":"WyIxNzEzNjUxMDY0IiwgIm46MSJd","device_class":"doorbell","friendly_name":"Front yard doorbell Chime"},"last_changed":"2025-03-05T15:29:12.037767+00:00","last_reported":"2025-03-05T15:29:12.037767+00:00","last_updated":"2025-03-05T15:29:12.037767+00:00","context":{"id":"01JNKESNB58BBWK3JTSSA9RNS8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "doorbell_chime",
+        "last_event_attributes": {
+          "nest_event_id": "WyIxNzEzNjUxMDY0IiwgIm46MSJd"
+        }
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"event.front_yard_doorbell_motion","state":"2025-03-05T16:57:52.150+00:00","attributes":{"event_types":["camera_motion","camera_person","camera_sound"],"event_type":"camera_person","nest_event_id":"WyIxNzEzNjUxMDcwIiwgIjQ3NTE5OTg0OSJd","device_class":"motion","friendly_name":"Front yard doorbell Motion"},"last_changed":"2025-03-05T16:57:52.150246+00:00","last_reported":"2025-03-05T16:57:52.150246+00:00","last_updated":"2025-03-05T16:57:52.150246+00:00","context":{"id":"01JNKKW0RPQWZFPK3X8Q5SVYMC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "camera_person",
+        "last_event_attributes": {
+          "nest_event_id": "WyIxNzEzNjUxMDcwIiwgIjQ3NTE5OTg0OSJd"
+        }
+      },
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.03.0","in_progress":false,"latest_version":"2025.03.0","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.03.0","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-03-05T17:38:27.269720+00:00","last_reported":"2025-03-05T17:38:27.269720+00:00","last_updated":"2025-03-05T17:38:27.269720+00:00","context":{"id":"01JNKP6AT5PV8E8R0A3DC9D85X","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.2.5","in_progress":false,"latest_version":"2025.2.5","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-03-05T17:38:27.270067+00:00","last_reported":"2025-03-05T17:38:27.270067+00:00","last_updated":"2025-03-05T17:38:27.270067+00:00","context":{"id":"01JNKP6AT6RDVCXWXDKNG5XE8E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.assist_microphone_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.2.0","in_progress":false,"latest_version":"1.3.0","release_summary":"# Changelog\n\n## 1.3.0\n\n- Update to wyoming-satellite 1.3.0 to get support for timers\n- Added configuration options for setting timer sound, repetitions and delay\n\n#","release_url":null,"skipped_version":null,"title":"Assist Microphone","update_percentage":null,"friendly_name":"Assist Microphone Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.270313+00:00","last_reported":"2025-03-05T17:38:27.270313+00:00","last_updated":"2025-03-05T17:38:27.270313+00:00","context":{"id":"01JNKP6AT6G25TCKEWBCT9HPTK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"17.2.0","in_progress":false,"latest_version":"20.0.2","release_summary":"## What’s changed\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update alpine_3_21/bind-tools to v9.18.34-r0 @[renovate[bot]](https://github.com/apps/renovate) ([#858](https://github.com/hassio-addons/addon-ssh/pull/858))\n- ⬆️ Update alpine_3_21/mariadb-client to v11.4","release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.270509+00:00","last_reported":"2025-03-05T17:38:27.270509+00:00","last_updated":"2025-03-05T17:38:27.270509+00:00","context":{"id":"01JNKP6AT64G6043V91S1B5A0W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.eufy_security_ws_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.8.0-2","in_progress":false,"latest_version":"1.9.1","release_summary":"## 1.9.1\n\n- Updated eufy-security-ws to version [`1.9.1`](https://github.com/bropat/eufy-security-ws/releases/tag/1.9.1)\n\n## 1.9.0\n\n- Updated eufy-security-ws to version [`1.9.0`](https://github.com/bropat/eufy-security-ws/releases/tag/1.9.0)\n\n#","release_url":null,"skipped_version":null,"title":"eufy-security-ws","update_percentage":null,"entity_picture":"/api/hassio/addons/402f1039_eufy_security_ws/icon","friendly_name":"eufy-security-ws Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.270709+00:00","last_reported":"2025-03-05T17:38:27.270709+00:00","last_updated":"2025-03-05T17:38:27.270709+00:00","context":{"id":"01JNKP6AT6TV1P0HS7KFE43H92","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":"# Changelog\n\n## 5.8.0\n\n- Update base image to Alpine 3.19\n\n## 5.7.0\n\n- Use new location for accessing the Home Assistant configuration folder using `/homeassistant`\n- Add access to the new public configuration folders of add-ons\n- Upgrade to Alpine 3.18\n-","release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.270902+00:00","last_reported":"2025-03-05T17:38:27.270902+00:00","last_updated":"2025-03-05T17:38:27.270902+00:00","context":{"id":"01JNKP6AT618CW1QKKACRM2TK1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.esphome_device_compiler_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2024.11.0","in_progress":false,"latest_version":"2025.2.2","release_summary":"## 2025.2.2\n\n- Fix ``end_of_scan_`` not being called while disconnecting [esphome#8328](https://github.com/esphome/esphome/pull/8328) by [@bdraco](https://github.com/bdraco)\n- [audio] Determine http timeout based on duration since last successful read [es","release_url":null,"skipped_version":null,"title":"ESPHome Device Compiler","update_percentage":null,"entity_picture":"/api/hassio/addons/5c53de3b_esphome/icon","friendly_name":"ESPHome Device Compiler Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.271089+00:00","last_reported":"2025-03-05T17:38:27.271089+00:00","last_updated":"2025-03-05T17:38:27.271089+00:00","context":{"id":"01JNKP6AT7HJ3RY1TT6B8Q1VF5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.cloudflared_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"5.2.10","in_progress":false,"latest_version":"5.2.10","release_summary":"## What’s changed\n## ⬆️ Dependency updates\n\n- ⬆️ Update Add-on base image to v17.1.3 @[renovate[bot]](https://github.com/apps/renovate) (#790)\n- ⬆️ Update Add-on base image to v17.1.4 @[renovate[bot]](https://github.com/apps/renovate) (#791)\n- ⬆️ Update A","release_url":null,"skipped_version":null,"title":"Cloudflared","update_percentage":null,"entity_picture":"/api/hassio/addons/9074a9fa_cloudflared/icon","friendly_name":"Cloudflared Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.271272+00:00","last_reported":"2025-03-05T17:38:27.271272+00:00","last_updated":"2025-03-05T17:38:27.271272+00:00","context":{"id":"01JNKP6AT72P7NN17SQNW9AW2G","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.ftp_update","state":"on","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.1.1","in_progress":false,"latest_version":"5.2.1","release_summary":"## What’s changed\n\n## 🐛 Bug fixes\n\n- Install pam_pwdfile to /usr/lib/security instead of /lib/security @lotharbach ([#233](https://github.com/hassio-addons/addon-ftp/pull/233))\n","release_url":null,"skipped_version":null,"title":"FTP","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ftp/icon","friendly_name":"FTP Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.271455+00:00","last_reported":"2025-03-05T17:38:27.271455+00:00","last_updated":"2025-03-05T17:38:27.271455+00:00","context":{"id":"01JNKP6AT79QSDXKXPX7BPSZ8N","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.5.0","in_progress":false,"latest_version":"6.5.0","release_summary":"# Changelog\n\n## 6.5.0\n\n- Update base image to Debian 12 (bookworm)\n- Update mosquitto to version 2.0.20\n- Update mosquitto-go-auth to version 2.1.0\n- Update libwebsockets to version 4.3.3\n\n## 6.4.1\n\n- Increase default max_queued_messages to 8192 to fix dr","release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":25},"last_changed":"2025-03-05T17:38:27.271920+00:00","last_reported":"2025-03-05T17:38:27.272057+00:00","last_updated":"2025-03-05T17:38:27.271920+00:00","context":{"id":"01JNKP6AT79Y6YX9S6MNWMTJGE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"14.2","in_progress":false,"latest_version":"14.2","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/14.2","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":3},"last_changed":"2025-03-05T17:38:27.272446+00:00","last_reported":"2025-03-05T17:38:27.272446+00:00","last_updated":"2025-03-05T17:38:27.272446+00:00","context":{"id":"01JNKP6AT80QSH7HYVVPJ7M5YS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T17:48:47.272057+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e4063_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Bulb RGBCW 5E4063 Restart"},"last_changed":"2025-02-26T20:50:27.858648+00:00","last_reported":"2025-02-26T20:50:27.858648+00:00","last_updated":"2025-02-26T20:50:27.858648+00:00","context":{"id":"01JN20CWCJ5PENMMM349A9WYZ9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e4063_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Bulb RGBCW 5E4063 Unpair remotes"},"last_changed":"2025-02-26T20:50:27.858808+00:00","last_reported":"2025-02-26T20:50:27.858808+00:00","last_updated":"2025-02-26T20:50:27.858808+00:00","context":{"id":"01JN20CWCJD3CRFPCTK4Z5TCSA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e3427_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Bulb RGBCW 5E3427 Restart"},"last_changed":"2025-02-26T20:50:27.866300+00:00","last_reported":"2025-02-26T20:50:27.866300+00:00","last_updated":"2025-02-26T20:50:27.866300+00:00","context":{"id":"01JN20CWCTK6MVEQ4T9TJG8GW0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e3427_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Bulb RGBCW 5E3427 Unpair remotes"},"last_changed":"2025-02-26T20:50:27.866420+00:00","last_reported":"2025-02-26T20:50:27.866420+00:00","last_updated":"2025-02-26T20:50:27.866420+00:00","context":{"id":"01JN20CWCT1ABBZNCY1AB5NTW0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_688f07_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Main Bedroom Led Restart"},"last_changed":"2025-02-26T20:50:27.869519+00:00","last_reported":"2025-02-26T20:50:27.869519+00:00","last_updated":"2025-02-26T20:50:27.869519+00:00","context":{"id":"01JN20CWCX9TR72MGYSTRKXH8M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_688f07_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Main Bedroom Led Unpair remotes"},"last_changed":"2025-02-26T20:50:27.869644+00:00","last_reported":"2025-02-26T20:50:27.869644+00:00","last_updated":"2025-02-26T20:50:27.869644+00:00","context":{"id":"01JN20CWCX35RJHF1FHC2JYCFA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_686a0d_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Living Room Led Restart"},"last_changed":"2025-02-26T23:08:04.570450+00:00","last_reported":"2025-02-26T23:08:04.570450+00:00","last_updated":"2025-02-26T23:08:04.570450+00:00","context":{"id":"01JN288VJTW9FYHKRX1GHY3J5E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_686a0d_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Living Room Led Unpair remotes"},"last_changed":"2025-02-26T23:08:04.570689+00:00","last_reported":"2025-02-26T23:08:04.570689+00:00","last_updated":"2025-02-26T23:08:04.570689+00:00","context":{"id":"01JN288VJTQJSYABSKWGE0M465","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5c1ff1_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Office Led 1 Restart"},"last_changed":"2025-02-26T23:40:00.387624+00:00","last_reported":"2025-02-26T23:40:00.387624+00:00","last_updated":"2025-02-26T23:40:00.387624+00:00","context":{"id":"01JN2A3AG33KRJJF0SMS124J0E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5c1ff1_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Office Led 1 Unpair remotes"},"last_changed":"2025-02-26T23:40:00.387876+00:00","last_reported":"2025-02-26T23:40:00.387876+00:00","last_updated":"2025-02-26T23:40:00.387876+00:00","context":{"id":"01JN2A3AG3X3G2V3NVC247KW5V","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5de76b_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Office Led 2 Restart"},"last_changed":"2025-02-26T23:40:03.042205+00:00","last_reported":"2025-02-26T23:40:03.042205+00:00","last_updated":"2025-02-26T23:40:03.042205+00:00","context":{"id":"01JN2A3D32CSC9HT35BYYX9QNZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5de76b_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Office Led 2 Unpair remotes"},"last_changed":"2025-02-26T23:40:03.042454+00:00","last_reported":"2025-02-26T23:40:03.042454+00:00","last_updated":"2025-02-26T23:40:03.042454+00:00","context":{"id":"01JN2A3D32A1RNEQY6T8GGVKCQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e1e9d_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Basement Led 1 Restart"},"last_changed":"2025-03-04T00:35:00.165031+00:00","last_reported":"2025-03-04T00:35:00.165031+00:00","last_updated":"2025-03-04T00:35:00.165031+00:00","context":{"id":"01JNF97KY59QBG774KSK3KG0Z8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e1e9d_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Basement Led 1 Unpair remotes"},"last_changed":"2025-03-04T00:35:00.165421+00:00","last_reported":"2025-03-04T00:35:00.165421+00:00","last_updated":"2025-03-04T00:35:00.165421+00:00","context":{"id":"01JNF97KY5BBNCNMP8VW2404HV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-05T13:57:12.158780+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.sm_p613","state":"home","attributes":{"source_type":"gps","latitude":43.7068604,"longitude":-80.4105271,"gps_accuracy":100,"altitude":379.0,"course":0,"speed":0,"vertical_accuracy":100,"friendly_name":"SM-P613"},"last_changed":"2025-03-03T18:13:17.498990+00:00","last_reported":"2025-03-03T18:13:17.498990+00:00","last_updated":"2025-03-03T18:13:17.498990+00:00","context":{"id":"01JNEKCP1T8SP0QKMMH6YJZ8WV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-03-03T18:27:21.224912+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p613_battery_level","state":"79","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-70","friendly_name":"SM-P613 Battery level"},"last_changed":"2025-03-03T13:33:08.136648+00:00","last_reported":"2025-03-03T13:33:08.136648+00:00","last_updated":"2025-03-03T13:33:08.136648+00:00","context":{"id":"01JNE3BPN8P0DNP3S580FT4S7E","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 79,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2025-03-03T18:27:21.227813+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p613_battery_state","state":"not_charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery","friendly_name":"SM-P613 Battery state"},"last_changed":"2025-03-03T03:17:46.225343+00:00","last_reported":"2025-03-03T03:17:46.225343+00:00","last_updated":"2025-03-03T03:17:46.225343+00:00","context":{"id":"01JND04Y3HWS3Q4P8JYR3V4R41","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "not_charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-03T18:27:21.229169+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p613_charger_type","state":"ac","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:power-plug","friendly_name":"SM-P613 Charger type"},"last_changed":"2025-03-01T16:55:14.733162+00:00","last_reported":"2025-03-01T16:55:16.274224+00:00","last_updated":"2025-03-01T16:55:14.733162+00:00","context":{"id":"01JN9A4B1DJ9ANX824JJK935TB","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ac",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2025-03-03T18:27:21.230250+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e2385_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Basement Led 2 Restart"},"last_changed":"2025-01-09T03:18:48.788042+00:00","last_reported":"2025-01-09T03:18:48.788042+00:00","last_updated":"2025-01-09T03:18:48.788042+00:00","context":{"id":"01JH4H4R6MTCN995H1Z0JQ9K3Z","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-02-26T20:49:06.752483+00:00"
+    },
+    {
+      "state": {"entity_id":"button.bulb_rgbcw_5e2385_unpair_remotes","state":"unknown","attributes":{"friendly_name":"Basement Led 2 Unpair remotes"},"last_changed":"2025-01-09T03:18:48.788363+00:00","last_reported":"2025-01-09T03:18:48.788363+00:00","last_updated":"2025-01-09T03:18:48.788363+00:00","context":{"id":"01JH4H4R6M2WVAYJS05SC26SEC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-02-26T20:49:06.752483+00:00"
+    }
+  ]
+}
