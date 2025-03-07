@@ -280,9 +280,9 @@ cards:
             entity: switch.backyard
             style:
               left: 7%
-              top: 50%
-              width: 230px
-              height: 280px
+              top: 40%
+              width: 10%
+              height: 20%
               opacity: 0
             tap_action:
               action: toggle
@@ -349,6 +349,50 @@ cards:
               top: 17%
               width: 3%
               height: 7%
+              opacity: 0
+            tap_action:
+              action: more-info
+          - type: image
+            image: /local/rect.png
+            entity: media_player.fire_tv_192_168_2_38
+            style:
+              left: 23%
+              top: 88%
+              width: 10%
+              height: 10%
+              opacity: 0
+            tap_action:
+              action: more-info
+          - type: image
+            image: /local/rect.png
+            entity: cover.living_room_curtain
+            style:
+              left: 9%
+              top: 71%
+              width: 6%
+              height: 15%
+              opacity: 0
+            tap_action:
+              action: more-info
+          - type: image
+            image: /local/rect.png
+            entity: cover.backyard_left_curtain
+            style:
+              left: 10%
+              top: 40%
+              width: 4%
+              height: 15%
+              opacity: 0
+            tap_action:
+              action: more-info
+          - type: image
+            image: /local/rect.png
+            entity: cover.backyard_right_curtain
+            style:
+              left: 12%
+              top: 27%
+              width: 5%
+              height: 15%
               opacity: 0
             tap_action:
               action: more-info
