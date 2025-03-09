@@ -32,7 +32,7 @@
     after: sunset
     before: sunrise
   - condition: time
-    before: '23:59:01'
+    before: '23:59:00'
     weekday:
     - sat
     - fri
