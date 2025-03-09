@@ -146,9 +146,8 @@
 - id: '1720066244980'
   alias: Bedroom Humidity
   description: ''
-  trigger:
+  triggers:
   - type: humidity
-    platform: device
     device_id: d873c8a3bfe858bf867ea8c1cd403123
     entity_id: 7b0b9fda0293b6991184ed0c7cb79bf9
     domain: sensor
@@ -158,18 +157,13 @@
       hours: 0
       minutes: 5
       seconds: 0
-  condition: []
-  action:
-  - device_id: 86a7dbedc6147e846661d1173576234a
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: a1bb718619b8daa06069ae464c493028
     domain: mobile_app
     type: notify
-    message: Bedroom humidity not safe
-    title: Bedroom Humidity
-  - device_id: a6dece6ad82ba11398fd2aa7203923d9
-    domain: mobile_app
-    type: notify
-    message: Bedroom humidity notification
-    title: Bedroom Humidity
+    message: Bedroom humidity no good!
   mode: single
 - id: '1721191525838'
   alias: Guest Bathroom Hourly
@@ -402,8 +396,21 @@
       milliseconds: 0
   - action: homeassistant.turn_off
     target:
-      entity_id: group.all_lights
-    data: {}
+      entity_id:
+      - light.dining
+      - switch.garage_light
+      - switch.living_room_switch
+      - switch.laundry_light
+      - switch.bedroom_door_1
+      - switch.main_bedroom
+      - switch.basement
+      - switch.backyard
+      - switch.foyer
+      - switch.hallway
+      - switch.kitchen
+      - switch.office
+      - switch.porch
+      - switch.stairs
   mode: single
 - id: '1738592288281'
   alias: Lights for Şaziye
@@ -517,4 +524,26 @@
     device_id: 2805780ce9262ab1a4895e41267752b6
     entity_id: 00d756a6ca1a6266f7d0104b51d2895b
     domain: switch
+  mode: single
+- id: '1741485290540'
+  alias: Forgot the cats!
+  description: ''
+  triggers:
+  - type: turned_on
+    device_id: fccb855464dbcebde8a160334aaf4eed
+    entity_id: 9acbfae6eb3677f6f874af8d825a8626
+    domain: switch
+    trigger: device
+    for:
+      hours: 1
+      minutes: 0
+      seconds: 0
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.living_room_speaker
+      message: You forgot about the cats, please let them out!
   mode: single
