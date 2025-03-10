@@ -519,7 +519,35 @@
                   "type": "weather-forecast",
                   "entity": "weather.forecast_home",
                   "forecast_type": "daily",
-                  "name": "Fergus"
+                  "name": "Fergus",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 4
+                  }
+                },
+                {
+                  "type": "custom:plotly-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.indoor_outdoor_meter_0c3f"
+                    },
+                    {
+                      "entity": "sensor.garage_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.basement_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.guest_bathroom_hygrometer"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 10,
+                  "logarithmic_scale": false,
+                  "grid_options": {
+                    "rows": 4,
+                    "columns": 12
+                  }
                 },
                 {
                   "type": "custom:mushroom-climate-card",
@@ -540,30 +568,15 @@
                   }
                 },
                 {
-                  "type": "custom:plotly-graph",
-                  "entities": [
-                    {
-                      "entity": "sensor.living_room_temperature"
-                    },
-                    {
-                      "entity": "sensor.indoor_outdoor_meter_0c3f"
-                    },
-                    {
-                      "entity": "sensor.garage_hygrometer"
-                    },
-                    {
-                      "entity": "sensor.basement_hygrometer"
-                    },
-                    {
-                      "entity": "sensor.guest_bathroom_hygrometer"
-                    }
-                  ],
-                  "hours_to_show": 24,
-                  "refresh_interval": 10,
-                  "logarithmic_scale": false,
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "sensor.yellow_bag",
+                  "icon_color": "accent",
+                  "fill_container": false,
                   "grid_options": {
-                    "rows": 5
-                  }
+                    "columns": "full"
+                  },
+                  "primary_info": "state",
+                  "secondary_info": "none"
                 },
                 {
                   "type": "custom:mushroom-entity-card",
@@ -574,17 +587,6 @@
                   "grid_options": {
                     "columns": "full"
                   }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "sensor.yellow_bag",
-                  "icon_color": "accent",
-                  "fill_container": false,
-                  "grid_options": {
-                    "columns": "full"
-                  },
-                  "primary_info": "state",
-                  "secondary_info": "none"
                 }
               ]
             },
@@ -823,15 +825,6 @@
                 {
                   "type": "tile",
                   "entity": "sensor.saziye_battery"
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading": "New section"
                 }
               ]
             }
