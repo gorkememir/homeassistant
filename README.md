@@ -1,6 +1,6 @@
-# Repo Description
+## Repo Description
 
-I'm keeping my homeassistant config here.
+I'm keeping my homeassistant config here...
 
 ## SH3D Files
 
