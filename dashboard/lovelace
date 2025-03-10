@@ -540,52 +540,29 @@
                   }
                 },
                 {
-                  "type": "tile",
-                  "entity": "sensor.indoor_outdoor_meter_0c3f",
-                  "name": "Main Bedroom",
-                  "show_entity_picture": false
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.indoor_outdoor_meter_5a3e",
-                  "name": "Main Bathroom"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.living_room_temperature",
-                  "name": "Living Room"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "sensor.guestroom_1_hygrometer",
-                  "fill_container": false,
-                  "name": "Top Office"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.indoor_outdoor_meter_c3ad",
-                  "name": "Guestroom#1"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.guestroom_2_hygrometer",
-                  "name": "Guestroom#2"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.basement_hygrometer",
-                  "name": "Basement"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.garage_hygrometer",
-                  "hide_state": false,
-                  "vertical": false,
-                  "show_entity_picture": false,
-                  "name": "Garage",
+                  "type": "custom:plotly-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.living_room_temperature"
+                    },
+                    {
+                      "entity": "sensor.indoor_outdoor_meter_0c3f"
+                    },
+                    {
+                      "entity": "sensor.garage_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.basement_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.guest_bathroom_hygrometer"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 10,
+                  "logarithmic_scale": false,
                   "grid_options": {
-                    "columns": 6,
-                    "rows": 1
+                    "rows": 5
                   }
                 },
                 {
@@ -661,15 +638,6 @@
                   "show_color_temp_control": false,
                   "collapsible_controls": true,
                   "fill_container": false
-                },
-                {
-                  "type": "custom:mushroom-light-card",
-                  "entity": "light.bulb_rgbcw_688f07",
-                  "show_brightness_control": true,
-                  "use_light_color": true,
-                  "show_color_temp_control": true,
-                  "show_color_control": true,
-                  "collapsible_controls": true
                 },
                 {
                   "type": "tile",
@@ -759,6 +727,15 @@
                   "tap_action": {
                     "action": "toggle"
                   }
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bulb_rgbcw_688f07",
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "collapsible_controls": true
                 },
                 {
                   "type": "tile",
