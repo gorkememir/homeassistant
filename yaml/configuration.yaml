@@ -5,6 +5,9 @@ default_config:
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
+  
+shell_command:
+  daily_update: bash /config/scripts/daily_git_update.sh
 
 automation: !include automations.yaml
 script: !include scripts.yaml
