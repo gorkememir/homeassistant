@@ -796,6 +796,14 @@
                 },
                 {
                   "type": "tile",
+                  "entity": "sensor.gorkem_s_pixel_8_pro_battery_level"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.samsung_s24_ebru_battery_level"
+                },
+                {
+                  "type": "tile",
                   "entity": "sensor.contact_sensor_df81_battery"
                 },
                 {
@@ -813,14 +821,6 @@
                 {
                   "type": "tile",
                   "entity": "sensor.indoor_outdoor_meter_0c3f_battery"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.gorkem_s_pixel_8_pro_battery_level"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.samsung_s24_ebru_battery_level"
                 },
                 {
                   "type": "tile",
