@@ -500,30 +500,52 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "custom:digital-clock",
-                  "style": "span.first-line \n{\n  font-size: 5em;\n  margin-bottom:25px;\n}\nspan.second-line \n{\n  font-size: 2.5em;\n  margin-bottom:15px;\n}\n",
-                  "locale": "can",
-                  "dateFormat": {
-                    "weekday": "long",
-                    "day": "2-digit",
-                    "month": "long"
-                  },
-                  "timeFormat": {
-                    "hour": "2-digit",
-                    "minute": "2-digit"
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.forecast_home"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.living_room",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "rows": 4,
+                    "columns": 6
                   }
                 },
                 {
-                  "show_current": true,
-                  "show_forecast": true,
-                  "type": "weather-forecast",
-                  "entity": "weather.forecast_home",
-                  "forecast_type": "daily",
-                  "name": "Fergus",
+                  "type": "picture-elements",
+                  "elements": [
+                    {
+                      "type": "state-label",
+                      "entity": "sensor.yellow_bag",
+                      "style": {
+                        "left": "61%",
+                        "top": "86%",
+                        "color": "black",
+                        "font-size": "11px",
+                        "font-weight": "bold",
+                        "font-family": "Comic Sans MS"
+                      }
+                    },
+                    {
+                      "type": "state-label",
+                      "entity": "sensor.blue_green_bins",
+                      "style": {
+                        "left": "53%",
+                        "top": "47%",
+                        "color": "black",
+                        "font-size": "11px",
+                        "font-weight": "bold",
+                        "font-family": "Comic Sans MS"
+                      }
+                    }
+                  ],
                   "grid_options": {
-                    "columns": 12,
-                    "rows": 4
-                  }
+                    "rows": 4,
+                    "columns": 6
+                  },
+                  "image": "/api/image/serve/98081190637ea6cb27d22b0d23e598ce/512x512",
+                  "dark_mode_image": "/api/image/serve/d5a84e7dea0d50adb8a9d77dad63481d/512x512"
                 },
                 {
                   "type": "custom:plotly-graph",
@@ -546,45 +568,6 @@
                   "logarithmic_scale": false,
                   "grid_options": {
                     "rows": 4,
-                    "columns": 12
-                  }
-                },
-                {
-                  "type": "custom:mushroom-climate-card",
-                  "entity": "climate.living_room",
-                  "fill_container": false,
-                  "show_temperature_control": true,
-                  "icon_type": "icon",
-                  "icon": "mdi:home-thermometer",
-                  "collapsible_controls": false,
-                  "name": "Nest",
-                  "grid_options": {
-                    "columns": "full",
-                    "rows": 1
-                  },
-                  "layout": "horizontal",
-                  "tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "sensor.yellow_bag",
-                  "icon_color": "accent",
-                  "fill_container": false,
-                  "grid_options": {
-                    "columns": "full"
-                  },
-                  "primary_info": "state",
-                  "secondary_info": "none"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "fill_container": true,
-                  "entity": "sensor.blue_green_bins",
-                  "primary_info": "state",
-                  "secondary_info": "none",
-                  "grid_options": {
                     "columns": "full"
                   }
                 }
