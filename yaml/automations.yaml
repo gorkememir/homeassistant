@@ -389,11 +389,6 @@
     offset: 0
   conditions: []
   actions:
-  - delay:
-      hours: 0
-      minutes: 30
-      seconds: 0
-      milliseconds: 0
   - action: homeassistant.turn_off
     target:
       entity_id:
@@ -411,6 +406,7 @@
       - switch.office
       - switch.porch
       - switch.stairs
+    data: {}
   mode: single
 - id: '1738592288281'
   alias: Lights for Şaziye
@@ -465,10 +461,21 @@
     offset: 0
   conditions: []
   actions:
+  - delay:
+      hours: 0
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
   - type: turn_on
     device_id: 400441e7f95777efa9c66352a2b7f3ca
     entity_id: eb5d56eff8ad8ae54642d1dc759fff34
     domain: switch
+  - action: cover.close_cover
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - cover.backyard_left_curtain
   mode: single
 - id: '1739467074410'
   alias: Purifier and Humidifier Conflict Prevention
