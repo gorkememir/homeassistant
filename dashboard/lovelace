@@ -6,6 +6,338 @@
     "config": {
       "views": [
         {
+          "type": "sections",
+          "max_columns": 3,
+          "title": "Dashboard",
+          "icon": "mdi:tablet-dashboard",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.forecast_home"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.living_room",
+                  "show_current_as_primary": false,
+                  "grid_options": {
+                    "rows": 4,
+                    "columns": 6
+                  }
+                },
+                {
+                  "type": "picture-elements",
+                  "elements": [
+                    {
+                      "type": "state-label",
+                      "entity": "sensor.yellow_bag",
+                      "style": {
+                        "left": "61%",
+                        "top": "86%",
+                        "color": "black",
+                        "font-size": "11px",
+                        "font-weight": "bold",
+                        "font-family": "Comic Sans MS"
+                      }
+                    },
+                    {
+                      "type": "state-label",
+                      "entity": "sensor.blue_green_bins",
+                      "style": {
+                        "left": "53%",
+                        "top": "47%",
+                        "color": "black",
+                        "font-size": "11px",
+                        "font-weight": "bold",
+                        "font-family": "Comic Sans MS"
+                      }
+                    }
+                  ],
+                  "grid_options": {
+                    "rows": 4,
+                    "columns": 6
+                  },
+                  "image": "/api/image/serve/98081190637ea6cb27d22b0d23e598ce/512x512",
+                  "dark_mode_image": "/api/image/serve/d5a84e7dea0d50adb8a9d77dad63481d/512x512"
+                },
+                {
+                  "type": "custom:plotly-graph",
+                  "entities": [
+                    {
+                      "entity": "sensor.indoor_outdoor_meter_0c3f"
+                    },
+                    {
+                      "entity": "sensor.garage_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.basement_hygrometer"
+                    },
+                    {
+                      "entity": "sensor.guest_bathroom_hygrometer"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 10,
+                  "logarithmic_scale": false,
+                  "grid_options": {
+                    "rows": 4,
+                    "columns": "full"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Basement",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.basement_switch",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.gym_socket_1",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading": "Main Floor",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "fan.living_room_purifier_fan",
+                  "name": "Air Purifier"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "cover.living_room_curtain"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "cover.backyard_left_curtain"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "cover.backyard_right_curtain"
+                },
+                {
+                  "type": "custom:mushroom-vacuum-card",
+                  "entity": "vacuum.saziye",
+                  "icon_animation": true,
+                  "fill_container": false,
+                  "commands": [],
+                  "grid_options": {
+                    "rows": 1,
+                    "columns": 6
+                  },
+                  "tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.dining",
+                  "show_brightness_control": true,
+                  "use_light_color": false,
+                  "show_color_control": false,
+                  "show_color_temp_control": false,
+                  "collapsible_controls": true,
+                  "fill_container": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.bot_ab22",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.living_room_switch",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Living Room"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.foyer",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.kitchen",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.hallway",
+                  "name": "Hallway",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.stairs",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.porch",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.backyard",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.garage_light",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "heading",
+                  "heading": "Top Floor",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.main_bedroom",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bulb_rgbcw_688f07",
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_temp_control": false,
+                  "show_color_control": false,
+                  "collapsible_controls": true,
+                  "tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.office",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.bedroom_door_1",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.laundry_light",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.main_bathroom_fan",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.guest_bathroom_fan",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.laundry_fan",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "picture-elements",
+                  "elements": [],
+                  "image": "https://demo.home-assistant.io/stub_config/floorplan.png",
+                  "camera_image": "camera.front_yard_doorbell",
+                  "camera_view": "live"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.gorkem_s_pixel_8_pro_battery_level"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.samsung_s24_ebru_battery_level"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.contact_sensor_df81_battery"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.front_door_battery_percentage"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.basement_hygrometer_battery"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.indoor_outdoor_meter_5a3e_battery"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.indoor_outdoor_meter_0c3f_battery"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.saziye_battery"
+                }
+              ]
+            }
+          ],
+          "cards": []
+        },
+        {
           "type": "panel",
           "title": "Floorplan",
           "path": "floorplan",
@@ -489,347 +821,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "sections",
-          "max_columns": 3,
-          "title": "Dashboard",
-          "icon": "mdi:tablet-dashboard",
-          "sections": [
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "custom:digital-clock",
-                  "style": "span.first-line \n{\n  font-size: 5em;\n  margin-bottom:25px;\n}\nspan.second-line \n{\n  font-size: 2.5em;\n  margin-bottom:15px;\n}\n",
-                  "locale": "can",
-                  "dateFormat": {
-                    "weekday": "long",
-                    "day": "2-digit",
-                    "month": "long"
-                  },
-                  "timeFormat": {
-                    "hour": "2-digit",
-                    "minute": "2-digit"
-                  }
-                },
-                {
-                  "show_current": true,
-                  "show_forecast": true,
-                  "type": "weather-forecast",
-                  "entity": "weather.forecast_home",
-                  "forecast_type": "daily",
-                  "name": "Fergus",
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 4
-                  }
-                },
-                {
-                  "type": "custom:plotly-graph",
-                  "entities": [
-                    {
-                      "entity": "sensor.indoor_outdoor_meter_0c3f"
-                    },
-                    {
-                      "entity": "sensor.garage_hygrometer"
-                    },
-                    {
-                      "entity": "sensor.basement_hygrometer"
-                    },
-                    {
-                      "entity": "sensor.guest_bathroom_hygrometer"
-                    }
-                  ],
-                  "hours_to_show": 24,
-                  "refresh_interval": 10,
-                  "logarithmic_scale": false,
-                  "grid_options": {
-                    "rows": 4,
-                    "columns": 12
-                  }
-                },
-                {
-                  "type": "custom:mushroom-climate-card",
-                  "entity": "climate.living_room",
-                  "fill_container": false,
-                  "show_temperature_control": true,
-                  "icon_type": "icon",
-                  "icon": "mdi:home-thermometer",
-                  "collapsible_controls": false,
-                  "name": "Nest",
-                  "grid_options": {
-                    "columns": "full",
-                    "rows": 1
-                  },
-                  "layout": "horizontal",
-                  "tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "sensor.yellow_bag",
-                  "icon_color": "accent",
-                  "fill_container": false,
-                  "grid_options": {
-                    "columns": "full"
-                  },
-                  "primary_info": "state",
-                  "secondary_info": "none"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "fill_container": true,
-                  "entity": "sensor.blue_green_bins",
-                  "primary_info": "state",
-                  "secondary_info": "none",
-                  "grid_options": {
-                    "columns": "full"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading": "Basement",
-                  "heading_style": "subtitle"
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.basement_switch",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.gym_socket_1",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "heading",
-                  "heading": "Main Floor",
-                  "heading_style": "subtitle"
-                },
-                {
-                  "type": "custom:mushroom-vacuum-card",
-                  "entity": "vacuum.saziye",
-                  "icon_animation": true,
-                  "fill_container": false,
-                  "commands": [],
-                  "grid_options": {
-                    "rows": 1,
-                    "columns": 6
-                  },
-                  "tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-light-card",
-                  "entity": "light.dining",
-                  "show_brightness_control": true,
-                  "use_light_color": false,
-                  "show_color_control": false,
-                  "show_color_temp_control": false,
-                  "collapsible_controls": true,
-                  "fill_container": false
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.bot_ab22",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.living_room_switch",
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "name": "Living Room"
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.foyer",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.kitchen",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.hallway",
-                  "name": "Hallway",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.stairs",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.porch",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.backyard",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.garage_light",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "cover.living_room_curtain"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "cover.backyard_left_curtain"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "cover.backyard_right_curtain"
-                },
-                {
-                  "type": "heading",
-                  "heading": "Top Floor",
-                  "heading_style": "subtitle"
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.main_bedroom",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-light-card",
-                  "entity": "light.bulb_rgbcw_688f07",
-                  "show_brightness_control": true,
-                  "use_light_color": true,
-                  "show_color_temp_control": true,
-                  "show_color_control": true,
-                  "collapsible_controls": true
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.office",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.bedroom_door_1",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.laundry_light",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.main_bathroom_fan",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.guest_bathroom_fan",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.laundry_fan",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                }
-              ],
-              "column_span": 1
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "picture-elements",
-                  "elements": [],
-                  "image": "https://demo.home-assistant.io/stub_config/floorplan.png",
-                  "camera_image": "camera.front_yard_doorbell",
-                  "camera_view": "live"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.contact_sensor_df81_battery"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.front_door_battery_percentage"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.basement_hygrometer_battery"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.indoor_outdoor_meter_5a3e_battery"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.indoor_outdoor_meter_0c3f_battery"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.gorkem_s_pixel_8_pro_battery_level"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.samsung_s24_ebru_battery_level"
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.saziye_battery"
-                }
-              ]
-            }
-          ],
-          "cards": []
         }
       ]
     }
