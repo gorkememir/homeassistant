@@ -34,3 +34,109 @@ rest_command:
     method: 'GET'
     headers:
       Content-Type: 'application/json'
+      
+# --- Input Numbers: Store the "initial" purchase price for each stock (current prices provided) ---
+input_number:
+  initial_price_hood:
+    name: "Initial Price HOOD"
+    initial: 39.24
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_appf:
+    name: "Initial Price APPF"
+    initial: 216.74
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_azpn:
+    name: "Initial Price AZPN"
+    initial: 264.33
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_bmi:
+    name: "Initial Price BMI"
+    initial: 198.1
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_cls:
+    name: "Initial Price CLS"
+    initial: 91.58
+    min: 0
+    max: 1000
+    step: 0.01
+    
+input_text:
+  financialmodelingprep_apikey:
+    name: financialmodelingprep apikey
+    initial: !secret financialmodelingprep_api_key
+
+# --- REST Sensors: Fetch current stock prices from Financial Modeling Prep ---
+sensor:
+  - platform: rest
+    name: "hood_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/HOOD?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "appf_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/APPF?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "azpn_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/AZPN?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "bmi_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/BMI?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "cls_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/CLS?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+
+# --- Template Sensors: Calculate shares, portfolio value, and profit/loss ---
+template:
+  - sensor:
+      - name: "hood_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (750 / states('input_number.initial_price_hood')|float)|round(2) }}"
+      - name: "appf_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1250 / states('input_number.initial_price_appf')|float)|round(2) }}"
+      - name: "azpn_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1250 / states('input_number.initial_price_azpn')|float)|round(2) }}"
+      - name: "bmi_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_bmi')|float)|round(2) }}"
+      - name: "cls_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (750 / states('input_number.initial_price_cls')|float)|round(2) }}"
+  - sensor:
+      - name: "portfolio_value"
+        unit_of_measurement: "USD"
+        state: >
+          {{
+            (
+              (states('sensor.hood_price')|float * (750 / states('input_number.initial_price_hood')|float)) +
+              (states('sensor.appf_price')|float * (1250 / states('input_number.initial_price_appf')|float)) +
+              (states('sensor.azpn_price')|float * (1250 / states('input_number.initial_price_azpn')|float)) +
+              (states('sensor.bmi_price')|float * (1000 / states('input_number.initial_price_bmi')|float)) +
+              (states('sensor.cls_price')|float * (750 / states('input_number.initial_price_cls')|float))
+            )|round(2)
+          }}
+      - name: "portfolio_profit_loss"
+        unit_of_measurement: "USD"
+        state: "{{ (states('sensor.portfolio_value')|float - 5000)|round(2) }}"
+      - name: "portfolio_profit_loss_percentage"
+        unit_of_measurement: "%"
+        state: "{{ ((states('sensor.portfolio_value')|float - 5000) / 5000 * 100)|round(2) }}"
+
+
