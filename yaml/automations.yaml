@@ -559,8 +559,33 @@
   - device_id: a1bb718619b8daa06069ae464c493028
     domain: mobile_app
     type: notify
-    message: '• Current Value: ${{ states(''sensor.portfolio_value'') }} \n • Profit/Loss:
-      ${{ states(''sensor.portfolio_profit_loss'') }} ({{ states(''sensor.portfolio_profit_loss_percentage'')
-      }}%)'
-    title: Portfolio Update
+    message: "• Current Value: ${{ states('sensor.portfolio_value') }} \\n • Profit/Loss:
+      ${{\nstates('sensor.portfolio_profit_loss') }} ({{\nstates('sensor.portfolio_profit_loss_percentage')
+      }}%)\n\n  -- % Change in Stocks --\n\n• HOOD: {{ ((states('sensor.hood_price')|float
+      - states('input_number.initial_price_hood')|float) / (states('input_number.initial_price_hood')|float)
+      * 100)|round(2) }}%\n\n• APPF: {{ ((states('sensor.appf_price')|float - states('input_number.initial_price_appf')|float)
+      / (states('input_number.initial_price_appf')|float) * 100)|round(2) }}%\n\n•
+      AZPN: {{ ((states('sensor.azpn_price')|float - states('input_number.initial_price_azpn')|float)
+      / (states('input_number.initial_price_azpn')|float) * 100)|round(2) }}%\n\n•
+      BMI: {{ ((states('sensor.bmi_price')|float - states('input_number.initial_price_bmi')|float)
+      / (states('input_number.initial_price_bmi')|float) * 100)|round(2) }}%\n\n•
+      CLS: {{ ((states('sensor.cls_price')|float - states('input_number.initial_price_cls')|float)
+      / (states('input_number.initial_price_cls')|float) * 100)|round(2) }}%\n"
+    title: Mid-Range Portfolio Update
+  - device_id: a1bb718619b8daa06069ae464c493028
+    domain: mobile_app
+    type: notify
+    message: "• Current Value: ${{ states('sensor.aggr_portfolio_value') }} \n• Profit/Loss:
+      ${{ states('sensor.aggr_portfolio_profit_loss') }} ({{\nstates('sensor.aggr_portfolio_profit_loss_percentage')
+      }}%)\n\n-- % Change in Stocks --\n\n• SOUN: {{ ((states('sensor.soun_price')|float
+      -\nstates('input_number.initial_price_soun')|float) /\n(states('input_number.initial_price_soun')|float)
+      * 100)|round(2) }}%\n\n• IONQ: {{ ((states('sensor.ionq_price')|float -\nstates('input_number.initial_price_ionq')|float)
+      /\n(states('input_number.initial_price_ionq')|float) * 100)|round(2) }}%\n\n•
+      BFLY: {{ ((states('sensor.bfly_price')|float -\nstates('input_number.initial_price_bfly')|float)
+      /\n(states('input_number.initial_price_bfly')|float) * 100)|round(2) }}%\n\n•
+      CSTL: {{ ((states('sensor.cstl_price')|float -\nstates('input_number.initial_price_cstl')|float)
+      /\n(states('input_number.initial_price_cstl')|float) * 100)|round(2) }}%\n\n•
+      CPRX: {{ ((states('sensor.cprx_price')|float -\nstates('input_number.initial_price_cprx')|float)
+      /\n(states('input_number.initial_price_cprx')|float) * 100)|round(2) }}%\n"
+    title: Aggressive Portfolio Update
   mode: single

@@ -67,6 +67,36 @@ input_number:
     min: 0
     max: 1000
     step: 0.01
+  initial_price_soun:
+    name: "Initial Price SOUN"
+    initial: 10.34
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_ionq:
+    name: "Initial Price IONQ"
+    initial: 25.00
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_bfly:
+    name: "Initial Price BFLY"
+    initial: 2.68
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_cstl:
+    name: "Initial Price CSTL"
+    initial: 19.29
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_cprx:
+    name: "Initial Price CPRX"
+    initial: 21.02
+    min: 0
+    max: 1000
+    step: 0.01
     
 input_text:
   financialmodelingprep_apikey:
@@ -100,10 +130,36 @@ sensor:
     resource_template: "https://financialmodelingprep.com/api/v3/quote-short/CLS?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
     value_template: "{{ value_json[0].price }}"
     scan_interval: 3600
+  - platform: rest
+    name: "soun_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/SOUN?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "ionq_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/IONQ?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "bfly_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/BFLY?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "cstl_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/CSTL?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "cprx_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/CPRX?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
 
 # --- Template Sensors: Calculate shares, portfolio value, and profit/loss ---
 template:
   - sensor:
+# Mid-range mid-risk portfolio
       - name: "hood_shares"
         unit_of_measurement: "shares"
         state: "{{ (750 / states('input_number.initial_price_hood')|float)|round(2) }}"
@@ -119,7 +175,6 @@ template:
       - name: "cls_shares"
         unit_of_measurement: "shares"
         state: "{{ (750 / states('input_number.initial_price_cls')|float)|round(2) }}"
-  - sensor:
       - name: "portfolio_value"
         unit_of_measurement: "USD"
         state: >
@@ -139,4 +194,37 @@ template:
         unit_of_measurement: "%"
         state: "{{ ((states('sensor.portfolio_value')|float - 5000) / 5000 * 100)|round(2) }}"
 
-
+# Aggressive Portfolio
+      - name: "soun_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (750 / states('input_number.initial_price_soun')|float)|round(2) }}"
+      - name: "ionq_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_ionq')|float)|round(2) }}"
+      - name: "bfly_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_bfly')|float)|round(2) }}"
+      - name: "cstl_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_cstl')|float)|round(2) }}"
+      - name: "cprx_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1250 / states('input_number.initial_price_cprx')|float)|round(2) }}"
+      - name: "aggr_portfolio_value"
+        unit_of_measurement: "USD"
+        state: >
+          {{
+            (
+              (states('sensor.soun_price')|float * (750 / states('input_number.initial_price_soun')|float)) +
+              (states('sensor.ionq_price')|float * (1000 / states('input_number.initial_price_ionq')|float)) +
+              (states('sensor.bfly_price')|float * (1000 / states('input_number.initial_price_bfly')|float)) +
+              (states('sensor.cstl_price')|float * (1000 / states('input_number.initial_price_cstl')|float)) +
+              (states('sensor.cprx_price')|float * (1250 / states('input_number.initial_price_cprx')|float))
+            )|round(2)
+          }}
+      - name: "aggr_portfolio_profit_loss"
+        unit_of_measurement: "USD"
+        state: "{{ (states('sensor.aggr_portfolio_value')|float - 5000)|round(2) }}"
+      - name: "aggr_portfolio_profit_loss_percentage"
+        unit_of_measurement: "%"
+        state: "{{ ((states('sensor.aggr_portfolio_value')|float - 5000) / 5000 * 100)|round(2) }}"
