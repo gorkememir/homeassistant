@@ -575,6 +575,7 @@
   - device_id: a1bb718619b8daa06069ae464c493028
     domain: mobile_app
     type: notify
+    title: Aggressive Portfolio Update
     message: "• Current Value: ${{ states('sensor.aggr_portfolio_value') }} \n• Profit/Loss:
       ${{ states('sensor.aggr_portfolio_profit_loss') }} ({{\nstates('sensor.aggr_portfolio_profit_loss_percentage')
       }}%)\n\n-- % Change in Stocks --\n\n• SOUN: {{ ((states('sensor.soun_price')|float
@@ -587,5 +588,20 @@
       /\n(states('input_number.initial_price_cstl')|float) * 100)|round(2) }}%\n\n•
       CPRX: {{ ((states('sensor.cprx_price')|float -\nstates('input_number.initial_price_cprx')|float)
       /\n(states('input_number.initial_price_cprx')|float) * 100)|round(2) }}%\n"
-    title: Aggressive Portfolio Update
+  - device_id: a1bb718619b8daa06069ae464c493028
+    domain: mobile_app
+    type: notify
+    title: Penny Portfolio Update
+    message: "• Current Value: ${{ states('sensor.penny_portfolio_value') }} \n• Profit/Loss:
+      ${{ states('sensor.penny_portfolio_profit_loss') }} ({{ states('sensor.penny_portfolio_profit_loss_percentage')
+      }}%)\n\n-- % Change in Stocks --\n\n• VUZI: {{ ((states('sensor.vuzi_price')|float
+      - states('input_number.initial_price_vuzi')|float) / (states('input_number.initial_price_vuzi')|float)
+      * 100)|round(2) }}%\n• GOVX: {{ ((states('sensor.govx_price')|float - states('input_number.initial_price_govx')|float)
+      / (states('input_number.initial_price_govx')|float) * 100)|round(2) }}%\n• CRDL:
+      {{ ((states('sensor.crdl_price')|float - states('input_number.initial_price_crdl')|float)
+      / (states('input_number.initial_price_crdl')|float) * 100)|round(2) }}%\n• QSG:
+      {{ ((states('sensor.qsg_price')|float - states('input_number.initial_price_qsg')|float)
+      / (states('input_number.initial_price_qsg')|float) * 100)|round(2) }}%\n• ORGO:
+      {{ ((states('sensor.orgo_price')|float - states('input_number.initial_price_orgo')|float)
+      / (states('input_number.initial_price_orgo')|float) * 100)|round(2) }}%\n"
   mode: single

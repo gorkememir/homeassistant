@@ -37,6 +37,36 @@ rest_command:
       
 # --- Input Numbers: Store the "initial" purchase price for each stock (current prices provided) ---
 input_number:
+  initial_price_vuzi:
+    name: "Initial Price VUZI"
+    initial: 2.36
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_govx:
+    name: "Initial Price GOVX"
+    initial: 1.41
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_crdl:
+    name: "Initial Price CRDL"
+    initial: 1.18
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_qsg:
+    name: "Initial Price QSG"
+    initial: 2.67
+    min: 0
+    max: 1000
+    step: 0.01
+  initial_price_orgo:
+    name: "Initial Price ORGO"
+    initial: 5.07
+    min: 0
+    max: 1000
+    step: 0.01
   initial_price_hood:
     name: "Initial Price HOOD"
     initial: 39.24
@@ -106,6 +136,31 @@ input_text:
 # --- REST Sensors: Fetch current stock prices from Financial Modeling Prep ---
 sensor:
   - platform: rest
+    name: "vuzi_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/VUZI?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "govx_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/GOVX?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "crdl_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/CRDL?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "qsg_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/QSG?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
+    name: "orgo_price"
+    resource_template: "https://financialmodelingprep.com/api/v3/quote-short/ORGO?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
+    value_template: "{{ value_json[0].price }}"
+    scan_interval: 3600
+  - platform: rest
     name: "hood_price"
     resource_template: "https://financialmodelingprep.com/api/v3/quote-short/HOOD?apikey={{ states('input_text.financialmodelingprep_apikey') }}"
     value_template: "{{ value_json[0].price }}"
@@ -159,6 +214,41 @@ sensor:
 # --- Template Sensors: Calculate shares, portfolio value, and profit/loss ---
 template:
   - sensor:
+# Penny stock portfolio
+      - name: "vuzi_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_vuzi')|float)|round(2) }}"
+      - name: "govx_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_govx')|float)|round(2) }}"
+      - name: "crdl_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_crdl')|float)|round(2) }}"
+      - name: "qsg_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_qsg')|float)|round(2) }}"
+      - name: "orgo_shares"
+        unit_of_measurement: "shares"
+        state: "{{ (1000 / states('input_number.initial_price_orgo')|float)|round(2) }}"
+      - name: "penny_portfolio_value"
+        unit_of_measurement: "USD"
+        state: >
+          {{
+            (
+              (states('sensor.vuzi_price')|float * (1000 / states('input_number.initial_price_vuzi')|float)) +
+              (states('sensor.govx_price')|float * (1000 / states('input_number.initial_price_govx')|float)) +
+              (states('sensor.crdl_price')|float * (1000 / states('input_number.initial_price_crdl')|float)) +
+              (states('sensor.qsg_price')|float * (1000 / states('input_number.initial_price_qsg')|float)) +
+              (states('sensor.orgo_price')|float * (1000 / states('input_number.initial_price_orgo')|float))
+            )|round(2)
+          }}
+      - name: "penny_portfolio_profit_loss"
+        unit_of_measurement: "USD"
+        state: "{{ (states('sensor.penny_portfolio_value')|float - 5000)|round(2) }}"
+      - name: "penny_portfolio_profit_loss_percentage"
+        unit_of_measurement: "%"
+        state: "{{ ((states('sensor.penny_portfolio_value')|float - 5000) / 5000 * 100)|round(2) }}"  
+  
 # Mid-range mid-risk portfolio
       - name: "hood_shares"
         unit_of_measurement: "shares"
