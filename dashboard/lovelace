@@ -235,12 +235,11 @@
                 },
                 {
                   "type": "custom:mushroom-light-card",
-                  "entity": "light.bulb_rgbcw_688f07",
-                  "show_brightness_control": true,
+                  "entity": "light.main_bedroom_leds",
                   "use_light_color": true,
-                  "show_color_temp_control": false,
-                  "show_color_control": false,
+                  "show_brightness_control": true,
                   "collapsible_controls": true,
+                  "show_color_control": false,
                   "tap_action": {
                     "action": "more-info"
                   }
