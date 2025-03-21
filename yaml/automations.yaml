@@ -130,7 +130,7 @@
     domain: sensor
     below: 21
   actions:
-  - device_id: 86a7dbedc6147e846661d1173576234a
+  - device_id: a1bb718619b8daa06069ae464c493028
     domain: mobile_app
     type: notify
     message: 'Bedroom temperature is: {{ states(''sensor.indoor_outdoor_meter_0c3f'',
@@ -261,15 +261,6 @@
     device_id: f0f00f1a6e402b8b8de574aa0ae7dd8a
     entity_id: 9d8ce1cfda7eb04301c07d84db1e4fa2
     domain: switch
-  mode: single
-- id: '1730091614332'
-  alias: Cozy Bedroom
-  description: ''
-  triggers:
-  - trigger: time
-    at: 02:00:00
-  conditions: []
-  actions: []
   mode: single
 - id: '1732237782329'
   alias: Fill the water
@@ -421,6 +412,9 @@
     - tue
     - thu
     - sat
+    - fri
+    - wed
+    - sun
   actions:
   - type: turn_on
     device_id: f0259b2928ed4afd2bd13cc0e5aafe76
@@ -553,4 +547,61 @@
       cache: true
       media_player_entity_id: media_player.living_room_speaker
       message: You forgot about the cats, please let them out!
+  mode: single
+- id: '1742099904186'
+  alias: Daily Portfolio Update
+  description: ''
+  triggers:
+  - at: '17:00:00'
+    trigger: time
+  conditions: []
+  actions:
+  - device_id: a1bb718619b8daa06069ae464c493028
+    domain: mobile_app
+    type: notify
+    message: "• Current Value: ${{ states('sensor.portfolio_value') }} \\n • Profit/Loss:
+      ${{\nstates('sensor.portfolio_profit_loss') }} ({{\nstates('sensor.portfolio_profit_loss_percentage')
+      }}%)\n\n  -- % Change in Stocks --\n\n• HOOD: {{ ((states('sensor.hood_price')|float
+      - states('input_number.initial_price_hood')|float) / (states('input_number.initial_price_hood')|float)
+      * 100)|round(2) }}%\n\n• APPF: {{ ((states('sensor.appf_price')|float - states('input_number.initial_price_appf')|float)
+      / (states('input_number.initial_price_appf')|float) * 100)|round(2) }}%\n\n•
+      AZPN: {{ ((states('sensor.azpn_price')|float - states('input_number.initial_price_azpn')|float)
+      / (states('input_number.initial_price_azpn')|float) * 100)|round(2) }}%\n\n•
+      BMI: {{ ((states('sensor.bmi_price')|float - states('input_number.initial_price_bmi')|float)
+      / (states('input_number.initial_price_bmi')|float) * 100)|round(2) }}%\n\n•
+      CLS: {{ ((states('sensor.cls_price')|float - states('input_number.initial_price_cls')|float)
+      / (states('input_number.initial_price_cls')|float) * 100)|round(2) }}%\n"
+    title: Mid-Range Portfolio Update
+  - device_id: a1bb718619b8daa06069ae464c493028
+    domain: mobile_app
+    type: notify
+    title: Aggressive Portfolio Update
+    message: "• Current Value: ${{ states('sensor.aggr_portfolio_value') }} \n• Profit/Loss:
+      ${{ states('sensor.aggr_portfolio_profit_loss') }} ({{\nstates('sensor.aggr_portfolio_profit_loss_percentage')
+      }}%)\n\n-- % Change in Stocks --\n\n• SOUN: {{ ((states('sensor.soun_price')|float
+      -\nstates('input_number.initial_price_soun')|float) /\n(states('input_number.initial_price_soun')|float)
+      * 100)|round(2) }}%\n\n• IONQ: {{ ((states('sensor.ionq_price')|float -\nstates('input_number.initial_price_ionq')|float)
+      /\n(states('input_number.initial_price_ionq')|float) * 100)|round(2) }}%\n\n•
+      BFLY: {{ ((states('sensor.bfly_price')|float -\nstates('input_number.initial_price_bfly')|float)
+      /\n(states('input_number.initial_price_bfly')|float) * 100)|round(2) }}%\n\n•
+      CSTL: {{ ((states('sensor.cstl_price')|float -\nstates('input_number.initial_price_cstl')|float)
+      /\n(states('input_number.initial_price_cstl')|float) * 100)|round(2) }}%\n\n•
+      CPRX: {{ ((states('sensor.cprx_price')|float -\nstates('input_number.initial_price_cprx')|float)
+      /\n(states('input_number.initial_price_cprx')|float) * 100)|round(2) }}%\n"
+  - device_id: a1bb718619b8daa06069ae464c493028
+    domain: mobile_app
+    type: notify
+    title: Penny Portfolio Update
+    message: "• Current Value: ${{ states('sensor.penny_portfolio_value') }} \n• Profit/Loss:
+      ${{ states('sensor.penny_portfolio_profit_loss') }} ({{ states('sensor.penny_portfolio_profit_loss_percentage')
+      }}%)\n\n-- % Change in Stocks --\n\n• VUZI: {{ ((states('sensor.vuzi_price')|float
+      - states('input_number.initial_price_vuzi')|float) / (states('input_number.initial_price_vuzi')|float)
+      * 100)|round(2) }}%\n• GOVX: {{ ((states('sensor.govx_price')|float - states('input_number.initial_price_govx')|float)
+      / (states('input_number.initial_price_govx')|float) * 100)|round(2) }}%\n• CRDL:
+      {{ ((states('sensor.crdl_price')|float - states('input_number.initial_price_crdl')|float)
+      / (states('input_number.initial_price_crdl')|float) * 100)|round(2) }}%\n• QSG:
+      {{ ((states('sensor.qsg_price')|float - states('input_number.initial_price_qsg')|float)
+      / (states('input_number.initial_price_qsg')|float) * 100)|round(2) }}%\n• ORGO:
+      {{ ((states('sensor.orgo_price')|float - states('input_number.initial_price_orgo')|float)
+      / (states('input_number.initial_price_orgo')|float) * 100)|round(2) }}%\n"
   mode: single
