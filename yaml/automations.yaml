@@ -253,15 +253,12 @@
     entity_id: 9d8ce1cfda7eb04301c07d84db1e4fa2
     domain: switch
   - delay:
-      hours: 0
       minutes: 5
-      seconds: 0
-      milliseconds: 0
   - type: turn_off
     device_id: f0f00f1a6e402b8b8de574aa0ae7dd8a
     entity_id: 9d8ce1cfda7eb04301c07d84db1e4fa2
     domain: switch
-  mode: single
+  mode: restart
 - id: '1732237782329'
   alias: Fill the water
   description: ''
