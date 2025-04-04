@@ -386,7 +386,6 @@
       - switch.laundry_light
       - switch.bedroom_door_1
       - switch.main_bedroom
-      - switch.basement
       - switch.backyard
       - switch.foyer
       - switch.hallway
@@ -394,6 +393,7 @@
       - switch.office
       - switch.porch
       - switch.stairs
+      - switch.basement_switch
     data: {}
   mode: single
 - id: '1738592288281'
