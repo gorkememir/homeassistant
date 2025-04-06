@@ -467,6 +467,12 @@
     target:
       entity_id:
       - cover.backyard_left_curtain
+      - cover.living_room_curtain
+      - cover.backyard_right_curtain
+      device_id:
+      - 08f02511de654351dd4714cc1c740d3d
+      - 4ae88ad38bbfd2dad7403a0dd72a8358
+      - 755972442d9944492d9e8be116416d6f
   mode: single
 - id: '1739467074410'
   alias: Purifier and Humidifier Conflict Prevention
